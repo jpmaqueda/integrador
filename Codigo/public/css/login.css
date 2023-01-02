@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    color:black;
+}
+header{
+    background-color: grey;
+    
+    
+}
+header div{
+   
+    display: flex;
+    
+    
+
+}
+header img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.main{
+    display: flex;
+    position: relative;
+    justify-content:center;
+    margin: 30px;
+   
+}
+
+
+.info{
+    height: 400px;
+    z-index: 10;
+    width: 30%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgb(100, 100, 100);
+    border-right: black 6px solid;
+    
+}
+.info h1{
+    font-size: 60px;
+}
+.crear{
+    border:none;
+    position:relative;
+    left: 50px;
+    top: 20px;
+    background-color: orange;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 70%;
+    
+}
+.direc{
+    font-size: 20px;
+    width: 70%;
+}
+.formulario {
+    background-color: orange;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    right:15px;
+    
+}
+form{
+    position: relative;
+    bottom: 20px;
+}
+input{
+    border: none;
+    width: 90%;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+}
+.ayuda:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.ingresar:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.olvidaste:hover{
+    color: white;
+    text-decoration: underline;
+}
+.crear1:hover{
+    color: white;
+    text-decoration: underline;
+}
+.texto:focus{
+    outline:none;
+    border:white;
+    box-shadow: 0px 0px 40px rgb(255, 254, 254);
+}
