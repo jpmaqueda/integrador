@@ -12,9 +12,8 @@ body{
     
 }
 .Header{
-	padding: 1em;
+	
        position: relative;
-       /*z-index: 1;*/
        color: #f7f7f7;
        background: #232F3E;
   width: 100%;
@@ -28,6 +27,8 @@ h1{
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 20px;
+	margin-left: 80px;
+	margin-top: 30px;
 
   }
 .btn-Delete {
@@ -174,6 +175,8 @@ hr{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items:flex-end
+	
 }
 .Subtotal{
 	font-size: 18px;
@@ -206,6 +209,7 @@ hr{
 	font-family: 'Open Sans';
 	font-weight: 600;
 	color: #202020;
+	float: right;
 }
 
 
