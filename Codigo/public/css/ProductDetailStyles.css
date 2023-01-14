@@ -1,0 +1,322 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(247, 238, 238);
+    /* max-width: 96vw; */
+}
+
+h3{
+    text-align: center;
+    margin: 5px auto;
+    
+}
+
+.envio h2{
+    font-size: 25px;
+    color: #060ea6;
+    text-align: center;
+    margin: 15px;
+}
+
+header{
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.div-desplegables p{
+    margin-bottom: 5px;
+    text-align: center;
+    font-style: italic;
+
+}
+
+
+.IMG{
+    text-align: center;
+    
+}
+
+ .img-carrusel{
+    border-radius: 15%;
+    width: 53vw;
+    margin: 9px 0px;   
+}
+
+.div-desplegables{
+    margin: 3px auto;
+    text-align: center;
+}
+
+
+#color{
+        border-radius: 19px;
+        border: 0.5px gray solid;
+        color: gray;
+        padding: 7px;
+}
+
+.caract-General{
+      border-top: #666 1px ;
+}
+
+.envio{
+    border: 0.3px solid #e4dcdc;
+    border-radius: 10px;
+    margin: 20px 15px 20px 15px;
+    box-shadow: 0px 0px 12px 4px rgb(208 193 193);
+}
+
+section div.envio div.input{
+    background-color: #FFF;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 173px;
+}
+
+section div.envio div.submit{
+    background-color: #FFF;
+    color: #666;
+    width: 10%;
+}
+
+.add-carrito{
+    background-color: #b7adad;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 8px;
+    
+    }
+.comprar{
+    background-color: #b7adad;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 8px;
+    
+}
+
+
+.cp{
+    margin: 15px;
+}
+
+div .cp .input{
+    margin: 6px 31px;
+}
+
+.envio h3{
+    margin: 15px 15px;
+}
+
+
+.descripcion h2{
+    color: #060ea6;
+    font-weight: 400;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    padding: 22px;
+    border-top: 1px dotted #cab9b9;
+}
+.descripcion p{
+    text-align: center;
+    line-height: 33px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    margin: 22px 25px;
+    
+}
+
+/* --------------------------Footer---------------------------------------- */
+.Icon-footer {
+    text-align: center;
+    color: #1259c3;
+    font-size: 2em;
+    margin: 15px;
+}
+
+.Icon-footer1 {
+    text-align: center;
+    color: #1259c3;
+    font-size: 2em;
+    margin: 15px;
+}
+
+.fa-solid, .fas:hover{
+    color: #181b3d;
+
+}
+
+.h3-footer {
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+}
+
+ footer nav p{
+    margin: 5px;
+    text-decoration: none;
+}
+
+footer nav li h3{
+    color:black
+}
+
+footer nav ul li{
+    color:#666;;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.copyright{
+    padding-top: 50px;
+    color: #666;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+
+
+@media (min-width: 480px){
+
+.top-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.IMG-Producto{  
+    margin: 0px 4px;
+    
+}
+
+.IMG{
+    width: 50%;
+}
+
+.img-carrusel, .IMG-Producto{
+    width: 45vw;
+}
+.envio{
+    width: 80%;
+    text-align: center;
+}
+
+.div-desplegables {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.fa-solid, .fas{
+    text-align: center;
+}
+
+section div.envio div.input{
+    text-align: center;
+    width:auto;
+}
+
+.Icon-footer1 {
+    text-align: center;
+    color: #1259c3;
+    font-size: 2em;
+    margin: 15px;
+}
+
+
+}
+
+@media (min-width: 769px){
+
+    .top-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .IMG-Producto{  
+        margin: 0px 4px;   
+    }
+    
+    .IMG{
+        width: 30.33%;
+    }
+    
+    .img-carrusel, .IMG-Producto, .envio{
+        width: 30vw;
+    }
+    
+    .div-desplegables {
+        margin: 30px auto;
+        text-align: center;
+    }
+    
+    
+    .footer-desktop{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .Icon-footer {
+        display: flex;
+        align-items: center;
+        color: #1259c3;
+        font-size: 2em;
+        margin: 13px;
+    }
+    
+    .Icon-footer1 {
+        display: flex;
+        align-items: center;
+        color: #1259c3;
+        font-size: 2em;
+        margin: 13px;
+        padding: 0 7vw;
+        border-left: 5px solid gray;
+        border-right: 5px solid gray;
+    }
+    
+    
+    
+    
+}
+
+
+@media (min-width: 1280px){
+    
+    
+    .top-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        /* max-width: 1200px;
+        margin: auto;
+         */
+    }
+
+    .IMG{
+        width:33.33vw;
+    }
+}

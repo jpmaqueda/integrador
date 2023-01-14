@@ -1,0 +1,265 @@
+.main-header {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    min-width: 420px;
+    background-color: #7d3535;
+    height: auto;
+    flex-direction: column;
+  }
+  .options {
+    display: flex;
+    justify-content: center;
+  
+    width: 100%;
+  }
+  .navtop {
+    display: flex;
+    height: max-content;
+    width: 100%;
+    background-color: whitesmoke;
+    min-width: 360px;
+    align-self: flex-start;
+  }
+  
+  .logo {
+    display: flex;
+    width: 75px;
+    border-radius: 200px;
+    margin: 10px;
+    border: solid 2px black;
+    padding: 4px;
+    box-shadow: 0 0 5px 0px;
+    flex-wrap: wrap;
+  }
+  .logopad {
+    display: flex;
+    padding: 0 0 15px 20px;
+    width: 80px;
+    margin-right: 25px;
+  }
+  .search {
+    display: flex;
+    height: 40px;
+    align-self: center;
+    min-width: min-content;
+    margin-left: 10px;
+    width: 100%;
+  }
+  
+  .search input {
+    display: flex;
+    border: solid rgb(255, 255, 255);
+    border-radius: 20px;
+    min-width: 200px;
+    align-content: center;
+    justify-self: left;
+    height: 35px;
+    color: black;
+    font-weight: 100;
+    font-size: small;
+    font-family: roboto;
+    box-shadow: 1px 1px 5px 1px #868484;
+    width: 100%;
+    max-width: 500px;
+  }
+  .navinferior {
+    display: flex;
+    background-color: rgb(90, 90, 122);
+    min-width: 360px;
+    height: 45px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .leyendaordenes {
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+    width: 50px;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    font-size: 25px;
+    color: rgb(196, 196, 196);
+    margin-left: 43px;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+  }
+  .direccion {
+    margin-left: 10px;
+    font-size: 10px;
+    max-width: 150px;
+    min-width: 150px;
+  }
+  .account {
+    display: flex;
+    align-items: center;
+    border: solid 3px rgb(90, 90, 122);
+    border-radius: 100px;
+    padding: 10px 10px 10px 10px;
+    margin: 40px 0px 0 25px;
+    color: rgb(90, 90, 122);
+    max-width: 15px;
+    height: 15px;
+  }
+  .options {
+    display: flex;
+    width: auto;
+  }
+  .leyendaccount {
+    display: none;
+  }
+  .infizq {
+    display: flex;
+  }
+  .infder {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: larger;
+    color: rgb(196, 196, 196);
+    margin: 0 11px 0 85px;
+  }
+  .ordenes {
+    display: none;
+  }
+  .locationbig {
+    display: flex;
+    min-width: 0%;
+    max-width: 0px;
+    align-self: center;
+  }
+  .locationbigicon {
+    display: none;
+  }
+  .canastasup {
+    display: none;
+  }
+  .menuinf {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .account {
+      display: flex;
+      margin-right: 5px;
+    }
+    .menuinf {
+      display: flex;
+      list-style: none;
+      justify-items: center;
+      align-items: center;
+    }
+    .menuinfitems {
+      padding: 9px;
+      width: 55px;
+      margin-left: 0px;
+      text-align: center;
+      margin: 0 0 0 15px;
+      color: whitesmoke;
+      font-weight: 300;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    .direccion {
+      display: none;
+    }
+    .navinferior {
+      justify-content: flex-start;
+    }
+    .location {
+      display: none;
+    }
+    .locationbig {
+      display: flex;
+      width: 100px;
+      flex-wrap: wrap;
+      margin-right: 10px;
+      padding-right: 200px;
+    }
+    .locationbigicon {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      margin-left: 20px;
+      color: rgb(114, 110, 110);
+    }
+    .direccionbig {
+      margin-left: 10px;
+      font-size: 10px;
+      max-width: 150px;
+      min-width: 150px;
+      color: black;
+    }
+    .infder {
+      display: none;
+    }
+    .canastasup {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row;
+      font-size: large;
+      color: rgb(90, 90, 122);
+      margin: 0 50px 0 5px;
+      border: solid 3px rgb(90, 90, 122);
+      border-radius: 100px;
+      padding: 8px;
+      height: 20px;
+      align-self: center;
+    }
+    .leyendaccount {
+      display: flex;
+      align-self: center;
+      font-size: 10px;
+      text-align: left;
+      width: 100%;
+      min-width: 75px;
+      flex-wrap: wrap;
+    }
+    .main-header {
+      min-width: 835px;
+    }
+   
+    .search input {
+      min-width: 240px;
+      width: 100%;
+    }
+    
+    
+  }
+  @media (min-width: 1000px) {
+    .ordenes {
+      display: flex;
+      justify-self: flex-start;
+      align-self: center;
+      border: solid 3px rgb(90, 90, 122);
+      border-radius: 100px;
+      padding: 11px;
+      height: 15px;
+      width: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .leyendaordenes {
+      display: flex;
+      align-self: center;
+      font-size: 10px;
+      text-align: left;
+      width: 100%;
+      min-width: 75px;
+      flex-wrap: wrap;
+    }
+  }

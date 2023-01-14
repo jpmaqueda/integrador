@@ -1,0 +1,52 @@
+.filtrosyorg {
+  display: flex;
+  width: 100%;
+  min-width: 420px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+}
+.menufiltro {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: transparent;
+  font-weight: 500;
+  border-right: solid 0.5px grey;
+  border-left: solid 0.5px grey;
+  border-bottom: solid 0.5px black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.menufiltro2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .filtrosyorg {
+    min-width: 835px;
+  }
+}
+@media (min-width: 1000px) {
+  .menufiltro2 {
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: transparent;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .menufiltro {
+    display: none;
+  }
+  .filtrosyorg {display: none;
+  }
+}
