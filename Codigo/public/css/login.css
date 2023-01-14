@@ -3,6 +3,7 @@
     margin: 0;
     text-decoration: none;
     color:black;
+    font-family: 'Roboto', sans-serif;
 }
 header{
     background-color: grey;
@@ -16,12 +17,20 @@ header div{
     
 
 }
-header img{
-    width: 130px;
-    height: 130px;
+header .img{
+    padding: 5px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin: 10px;
     margin-left: 40px;
+    border: black solid 3px;
+    transition: 500ms all;
+    ;
+}
+.img:hover{
+    border-color: orange;
+    transform: scale(1.1);
 }
 
 .main{
@@ -36,7 +45,7 @@ header img{
 .info{
     height: 400px;
     z-index: 10;
-    width: 30%;
+    width: 500px;
     background-color: white;
     padding: 40px;
     border-radius: 20px;
@@ -44,32 +53,50 @@ header img{
     border-right: black 6px solid;
     
 }
+.formulario2{
+    display: none;
+}
+.titulo-celu, .google-celu, .option-celu{
+    display: none;
+}
+
+.crear1{
+   transition: 500ms all;
+   width: 80%;
+}
 .info h1{
-    font-size: 60px;
+    font-size: 50px;
+    position: relative;
+    left: 18px;
+    margin: 20px 0;
 }
 .crear{
     border:none;
-    position:relative;
-    left: 50px;
-    top: 20px;
-    background-color: orange;
+    
+    
+    background-color: white;
     border-radius: 10px;
     color: black;
     text-align: center;
     padding: 10px;
     width: 70%;
+    transition: 500ms all; 
     
 }
 .direc{
-    font-size: 20px;
-    width: 70%;
+    font-size: 25px;
+    font-weight: bold;
+    width: 80%;
+    position: relative;
+    
 }
 .formulario {
     background-color: orange;
     border-radius: 0 20px 20px 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    align-items:center;
+    justify-content: space-evenly;
     height: 400px;
     width: 400px;
     flex-direction: column;
@@ -77,6 +104,80 @@ header img{
     position: relative;
     right:15px;
     
+}.option{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.separador1{
+    display: block;
+    margin: 0 10px ;
+    width: 60%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(233, 237, 241, 0) 20%, black);
+}
+.or{
+    width: 55px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+.separador2{
+    transform: rotate(180deg);
+    display: block;
+    margin: 0 10px ;
+    width: 60%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(233, 237, 241, 0) 20%, black);
+
+}
+.google{
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 300ms;
+}
+
+.google img{
+    width: 17px;
+    height:17px ;
+}
+a img{
+    position: relative;
+    top: 2px;
+    width: 13px;
+    margin-right: 10px;
+}
+.google:hover{
+    background-color: #0069ff;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+}
+
+
+.option2{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.separador3{
+    display: block;
+    
+    width: 70%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(233, 237, 241, 0) 20%, black);
+}
+.separador4{
+    display: block;
+    
+    width: 70%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(233, 237, 241, 0) 20%, black);
+    transform: rotate(180deg);
 }
 form{
     position: relative;
@@ -89,24 +190,160 @@ input{
     margin: 15px;
     padding: 10px;
 }
+input#password.texto{
+    margin-bottom: 2px;
+}
+.todavia{
+    position: relative;
+    
+    
+}
+.ayuda{
+    transition: 500ms;
+    
+
+}
 .ayuda:hover{
-    color: orange;
+    color: white;
     text-decoration: underline;
+}
+.ingresar{
+    height: 38px;
+    transition: 500ms;
+    background-color: orange;
 }
 .ingresar:hover{
-    color: orange;
+    
+    color: white;
     text-decoration: underline;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+.olvidaste{
+    font-size: 12px;
+    transition: 500ms;
+    margin-left: 20px;
 }
 .olvidaste:hover{
-    color: white;
+    color: orange;
     text-decoration: underline;
 }
 .crear1:hover{
-    color: white;
+    color: orange;
     text-decoration: underline;
+    
+}
+.crear:hover{
+    box-shadow: 0px 0px 10px black;
+}
+.texto{
+    border:solid black 1px;
 }
 .texto:focus{
     outline:none;
-    border:white;
-    box-shadow: 0px 0px 40px rgb(255, 254, 254);
+    
+    box-shadow: 0px 0px 10px rgb(251, 128, 5);
+}
+i{
+    color: black;
+    font-weight: 30px;
+    position: relative;
+    left: -20px;
+    
+}
+@media (max-width:768px){
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .info{
+        width: 90%;
+        box-shadow: inset 10px 10px 44px -33px rgba(0,0,0,0.75);
+        border: 1px solid black;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+        height: 400px;
+        
+    }
+    .titulo-celu,.google-celu{
+        display: block;
+        
+    }
+    h1.titulo-celu{
+        margin: 10px 0;
+    }
+    
+    
+    .google-celu{
+        border: 1px solid black;
+        width: 90%;
+        height: 38px;
+        text-align: center;
+        margin: 10px 15px;
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    
+    
+    .titulo-desktop{
+        display: none;
+    }
+    .info h1{
+        font-size: 35px;
+    }
+    .formulario{
+        display: none;  
+    }
+    .formulario2{
+        width: 90%;
+        
+        background-color: white;
+        display: block;
+        display: flex;
+        
+        
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    
+        border: 1px solid black;
+        border-radius: 0px 0px 10px 10px;
+        background-color: #F8F9F9;
+        border-top: none;
+        bottom:20px;
+        height: 90px;
+        box-shadow: inset 10px 10px 44px -33px rgba(0,0,0,0.75);    
+    }
+    .formulario2 button{
+        font-size: 16px;
+        color: #551A8B;
+        border: none;
+        background-color: transparent;
+    }
+    
+}
+@media (max-width:480px){
+    .info, .formulario2 {
+        width: 100%;
+        padding: 20px;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+    .info input, .google-celu{
+        width: 100%;
+        
+    }
+    .formulario2 {
+        padding:15px 0px 15px 15px ;
+        font-size: 15px;
+    }
+    h1.titulo-celu{
+        font-size: 25px;
+    }
 }
