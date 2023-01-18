@@ -7,25 +7,25 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(247, 238, 238);
-    /* max-width: 96vw; */
+    background-color: whitesmoke;
+  
 }
 
 h3{
     text-align: center;
     margin: 5px auto;
+    color:rgb(90, 90, 122) ;
     
 }
 
 .envio h2{
     font-size: 25px;
-    color: #060ea6;
+    color:rgb(90, 90, 122) ;
     text-align: center;
     margin: 15px;
 }
 
 header{
-    border: 1px solid blue;
     text-align: center;
 }
 
@@ -37,15 +37,11 @@ header{
 }
 
 
-.IMG{
-    text-align: center;
-    
-}
-
  .img-carrusel{
     border-radius: 15%;
-    width: 53vw;
-    margin: 9px 0px;   
+    width: 350px;
+    margin: 9px auto;  
+ 
 }
 
 .div-desplegables{
@@ -66,9 +62,9 @@ header{
 }
 
 .envio{
-    border: 0.3px solid #e4dcdc;
+    border: 0px solid #e4dcdc;
     border-radius: 10px;
-    margin: 20px 15px 20px 15px;
+    margin: auto;
     box-shadow: 0px 0px 12px 4px rgb(208 193 193);
 }
 
@@ -89,21 +85,23 @@ section div.envio div.submit{
 }
 
 .add-carrito{
-    background-color: #b7adad;
+    background-color: rgb(90, 90, 122);
     font-size: 17px;
     border-radius: 10px;
     text-align: center;
     margin: 20px 20px;
     padding: 8px;
+    color: white;
     
     }
 .comprar{
-    background-color: #b7adad;
+    background-color: rgb(90, 90, 122);
     font-size: 17px;
     border-radius: 10px;
     text-align: center;
     margin: 20px 20px;
     padding: 8px;
+    color: white;
     
 }
 
@@ -122,10 +120,9 @@ div .cp .input{
 
 
 .descripcion h2{
-    color: #060ea6;
+    color: rgb(90, 90, 122);
     font-weight: 400;
     text-decoration: underline;
-    font-style: italic;
     text-align: center;
     padding: 22px;
     border-top: 1px dotted #cab9b9;
@@ -135,7 +132,6 @@ div .cp .input{
     line-height: 33px;
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
-    font-style: italic;
     margin: 22px 25px;
     
 }
@@ -143,14 +139,14 @@ div .cp .input{
 /* --------------------------Footer---------------------------------------- */
 .Icon-footer {
     text-align: center;
-    color: #1259c3;
+    color:  rgb(90, 90, 122);
     font-size: 2em;
     margin: 15px;
 }
 
 .Icon-footer1 {
     text-align: center;
-    color: #1259c3;
+    color: rgb(90, 90, 122);
     font-size: 2em;
     margin: 15px;
 }
@@ -186,7 +182,7 @@ footer nav ul li{
     padding-top: 50px;
     color: #666;
     list-style: none;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -257,13 +253,13 @@ section div.envio div.input{
     .IMG-Producto{  
         margin: 0px 4px;   
     }
-    
+/*     
     .IMG{
         width: 30.33%;
-    }
+    } */
     
     .img-carrusel, .IMG-Producto, .envio{
-        width: 30vw;
+        width: 30%;
     }
     
     .div-desplegables {
@@ -316,7 +312,7 @@ section div.envio div.input{
          */
     }
 
-    .IMG{
-        width:33.33vw;
+    body{
+        max-width: 1200px;
+        margin: auto;
     }
-}
