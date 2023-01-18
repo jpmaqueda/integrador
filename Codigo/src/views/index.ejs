@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./css\slider.css" />
     <link rel="stylesheet" href="./css\categoria.css" />
     <link rel="stylesheet" href="./css\cajaprod1.css" />
-    <link rel="stylesheet" href="./css\header.css" />
+    <%- include('partial/head') %>
     <link rel="stylesheet" href="./css\filtrosyorg.css" />
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,59 +27,9 @@
     <title>Index</title>
   </head>
   <body>
+    
     <%- include('partial/header') %>
-    <!-- <header class="main-header">
-      <div class="navtop">
-        <div class="logopad">
-          <img src="imagenes\Logo.jpg" class="logo" />
-        </div>
-
-        <nav class="locationbig">
-          <a class="locationbigicon"
-            ><i class="fa-sharp fa-solid fa-location-dot"></i>
-            <p class="direccionbig">
-              Calle falsa 123, CP 1119, Buenos Aires, Argentina
-            </p></a
-          >
-        </nav>
-        <nav class="search">
-          <input type="text" placeholder="Buscar productos, marcas y mas..." />
-        </nav>
-        <nav class="options">
-          <a class="account"><i class="fa-solid fa-user"></i></a>
-          <p class="leyendaccount">Hola Juan, accede a tu cuenta</p>
-          <a class="ordenes"
-            ><i class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i
-          ></a>
-          <p class="leyendaordenes">Órdenes y devoluciones</p>
-          <a class="canastasup"
-            ><i class="fa-sharp fa-solid fa-cart-shopping"></i
-          ></a>
-        </nav>
-      </div>
-      <div class="navinferior">
-        <div class="infizq">
-          <a href="*" class="burger-menu">
-            <i class="fa-solid fa-bars"></i>
-          </a>
-          <a class="location"
-            ><i class="fa-sharp fa-solid fa-location-dot"></i>
-            <p class="direccion">
-              Calle falsa 123, CP 1119, Buenos Aires, Argentina
-            </p></a
-          >
-        </div>
-        <div class="infder">
-          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        </div>
-        <ul class="menuinf">
-          <li class="menuinfitems">Mesas</li>
-          <li class="menuinfitems">Camas</li>
-          <li class="menuinfitems">Sillones</li>
-          <li class="menuinfitems">Sillas</li>
-        </ul>
-      </div>
-    </header> -->
+   
     <main>
       <div class="sliderfull">
         <img class="sliderimg" src="imagenes\bannerej.jpg" />
@@ -247,59 +197,9 @@
 </div>
 </div>
     </nav>
-  </div>
-  <!--<div class="columnaprueba">
-    <div class="preciodesc">
-      <div class="imagenboxcontainer">
-        <div class="opacity">
-      </div>
-      <p class="promo">PROMOCION</p>
-          <img class="imagencaja" src="imagenes\silla2.jpg">
-    </div>
-    <p class="descripcion">DESCRIPCION</p>
-    <p class="precio">£1.500</p>
-  </div>
-  <div class="preciodesc">
-    <div class="imagenboxcontainer">
-      <div class="opacity">
-    </div>
-    <p class="promo">PROMOCION</p>
-        <img class="imagencaja" src="imagenes\silla2.jpg">
-  </div>
-  <p class="descripcion">DESCRIPCION</p>
-  <p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-  <div class="imagenboxcontainer">
-    <div class="opacity">
-  </div>
-  <p class="promo">PROMOCION</p>
-      <img class="imagencaja" src="imagenes\silla2.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-  <div class="imagenboxcontainer">
-    <div class="opacity">
-  </div>
-  <p class="promo">PROMOCION</p>
-      <img class="imagencaja" src="imagenes\silla2.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-  <div class="imagenboxcontainer">
-    <div class="opacity">
-  </div>
-  <p class="promo">PROMOCION</p>
-      <img class="imagencaja" src="imagenes\silla2.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>-->
+  </div> 
   </div>
     </main>
   </body>
+  <%- include('partial/footer') %>
 </html>

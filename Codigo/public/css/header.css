@@ -6,6 +6,7 @@
     background-color: #7d3535;
     height: auto;
     flex-direction: column;
+    
   }
   .options {
     display: flex;

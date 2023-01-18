@@ -10,59 +10,9 @@
     
 </head>
 <body>
-    <header class="main-header">
-        <div class="navtop">
-          <div class="logopad">
-            <img src="imagenes\Logo.jpg" class="logo" />
-          </div>
-  
-          <nav class="locationbig">
-            <a class="locationbigicon"
-              ><i class="fa-sharp fa-solid fa-location-dot"></i>
-              <p class="direccionbig">
-                Calle falsa 123, CP 1119, Buenos Aires, Argentina
-              </p></a
-            >
-          </nav>
-          <nav class="search">
-            <input type="text" placeholder="Buscar productos, marcas y mas..." />
-          </nav>
-          <nav class="options">
-            <a class="account"><i class="fa-solid fa-user"></i></a>
-            <p class="leyendaccount">Hola Juan, accede a tu cuenta</p>
-            <a class="ordenes"
-              ><i class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i
-            ></a>
-            <p class="leyendaordenes">Órdenes y devoluciones</p>
-            <a class="canastasup"
-              ><i class="fa-sharp fa-solid fa-cart-shopping"></i
-            ></a>
-          </nav>
-        </div>
-        <div class="navinferior">
-          <div class="infizq">
-            <a href="*" class="burger-menu">
-              <i class="fa-solid fa-bars"></i>
-            </a>
-            <a class="location"
-              ><i class="fa-sharp fa-solid fa-location-dot"></i>
-              <p class="direccion">
-                Calle falsa 123, CP 1119, Buenos Aires, Argentina
-              </p></a
-            >
-          </div>
-          <div class="infder">
-            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          </div>
-          <ul class="menuinf">
-            <li class="menuinfitems">Mesas</li>
-            <li class="menuinfitems">Camas</li>
-            <li class="menuinfitems">Sillones</li>
-            <li class="menuinfitems">Sillas</li>
-          </ul>
-        </div>
-    </header>
-
+    
+  <%- include('partial/header') %>
+<main>
     <section class="top-section">
             
                 <img class="img-carrusel" src="/imagenes/IMG_20220909_160730596.jpg" alt="Imagen Producto Seleccionado">
@@ -141,42 +91,44 @@
                 </p>
         </div>
     </section>
+</main>
     <footer>
-        <nav>
-            <div class="footer-desktop">                
-                <div class="Icon-footer"><i class="fas fa-truck-moving"></i>             
-                  
-                        <ul type="none">
-                            <li><h3>Envíos a todo el pais</h3></li>                       
-                        </ul>
-                </div> 
-                <div class="Icon-footer1"><i class="fas fa-credit-card"></i>
-            
-                        <ul type="none"> 
-                            <li><h3 class="h3-footer">
-                                <p> -Debito </p>
-                                
-                                <p> -Credito </p>
-                                
-                                <p> - Efectivo </p>
-                                
-                                                               
-                            </h3></li>
-                        </ul>
-                </div>   
-                <div class="Icon-footer"><i class="fas fa-user-shield"></i>       
+      <nav>
+          <div class="footer-desktop">                
+              <div class="Icon-footer"><i class="fas fa-truck-moving"></i>             
                 
-                        <ul type="none">
-                            <li><h3> Compra con Seguridad </h3> </li>                   
-                        </ul>      
-                </div>
-            </div>
-        </nav>   
-        <nav>
-        <div>         
-                        <footer class="copyright"> Copyright © 1999-2023</footer>
-            </div>
-        </nav>
-    </footer>
+                      <ul type="none">
+                          <li><h3>Envíos a todo el pais</h3></li>                       
+                      </ul>
+              </div> 
+              <div class="Icon-footer1"><i class="fas fa-credit-card"></i>
+          
+                      <ul type="none"> 
+                          <li><h3 class="h3-footer">
+                              <p> -Debito </p>
+                              
+                              <p> -Credito </p>
+                              
+                              <p> - Efectivo </p>
+                              
+                                                             
+                          </h3></li>
+                      </ul>
+              </div>   
+              <div class="Icon-footer"><i class="fas fa-user-shield"></i>       
+              
+                      <ul type="none">
+                          <li><h3> Compra con Seguridad </h3> </li>                   
+                      </ul>      
+              </div>
+          </div>
+      </nav>   
+      <nav>
+      <div>         
+                      <footer class="copyright"> Copyright © 1999-2023</footer>
+          </div>
+      </nav>
+  </footer>
+
 </body>
 </html>
