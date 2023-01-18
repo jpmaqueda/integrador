@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7eff94083.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css\header.css" />
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Ingresa con tu usuario</title>
+</head>
+<body>
+    <%- include('partial/header') %>
+    <main class="login">
+        <div class="main">
+            <div class="info">
+               <form action="">
+                    <h1 class="titulo-celu">Bienvenidos</h1>
+                    
+                    
+                    <h1 class="titulo-desktop">Iniciar sesión</h1>
+                    <input class="texto" type="text" id="usuario" name="usuario" placeholder="Dirección de correo electrónico o numero de teléfono">
+                    <input class="texto" type="password" id="password" name="password" placeholder="Contraseña">
+                    <p><a class="olvidaste" href="https://viva-mundo.com/es/noticia/post/los-10-mejores-trucos-para-mejorar-tu-memoria-y-recordar-cualquier-cosa">¿Olvidate tu contraseña?</a></p>
+                    <input class="ingresar" type="submit" value="Ingresar">
+                    <a href="" class="google-celu"><img class="img" src="https://app.nudgify.com/images/google-logo.png" alt=""></i>Ingresar</a>
+                </form>
+                
+                
+            </div>
+            <div class="formulario2">
+                    <p>¿Todavia no tienes una cuenta?<a class="registrarse" href="/register"><button class="" type="button">registrarse</button></a></p>
+                    
+                </div>
+            <div class="formulario">
+                <p class="direc">Ingresa tu dirección de correo electrónico o numero de teléfono</p>
+                <div class="option">
+                    <div class="separador1"></div>
+                    <p class="or">o sino</p>             
+                    <div class="separador2"></div>
+                </div>
+                <a href="" class="google"><img src="https://app.nudgify.com/images/google-logo.png" alt="">Ingresar con Google</a>
+                <div class="option2">
+                    <div class="separador3"></div>
+                                
+                    <div class="separador4"></div>
+                </div>
+                
+                <p ><a class="ayuda" href="https://www.redpsi.com.ar/profesionales/busqueda/tipoProfesional=psicologo_zona=caba?gclid=CjwKCAiA-8SdBhBGEiwAWdgtcAzxGKJGVdZO_IOdk6-8V4hP8aucuSX4P4HBRcrELBxQDX8Kqki5hRoCCqEQAvD_BwE">¿Necesitas ayuda?</a></p>
+                
+                <br>
+                <p class="todavia">¿Todavia no tienes una cuenta?</p>
+                <a class="crear1" href="/register"><button class="crear" type="button">Crea tu cuenta aqui</button></a>
+                
+            </div>
+            
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -2,47 +2,24 @@
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
-    color:black;
     font-family: 'Roboto', sans-serif;
 }
 header{
-    background-color: grey;
-    
-    
+    box-sizing: none;
 }
-header div{
-   
-    display: flex;
-    
-    
 
-}
-header .img{
-    padding: 5px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin: 10px;
-    margin-left: 40px;
-    border: black solid 3px;
-    transition: 500ms all;
-    ;
-}
-.img:hover{
-    border-color: orange;
-    transform: scale(1.1);
-}
 
 .main{
     display: flex;
     position: relative;
     justify-content:center;
     margin: 30px;
-   
+    
 }
 
 
 .info{
+    box-sizing: border-box;
     height: 400px;
     z-index: 10;
     width: 500px;
@@ -143,7 +120,7 @@ header .img{
     width: 17px;
     height:17px ;
 }
-a img{
+a img.img{
     position: relative;
     top: 2px;
     width: 13px;
@@ -244,13 +221,13 @@ input#password.texto{
     
     box-shadow: 0px 0px 10px rgb(251, 128, 5);
 }
-i{
+/* i{
     color: black;
     font-weight: 30px;
     position: relative;
     left: -20px;
     
-}
+} */
 @media (max-width:768px){
     .main{
         display: flex;
