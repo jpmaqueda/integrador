@@ -1,14 +1,15 @@
 *{
-    box-sizing: border-box; 
+    
     margin: 0;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
 
-/* header{
-    box-sizing: none !important ;
 
-} */
+:not(.main-header, p, a, header input,header div,header li){
+    box-sizing: border-box; 
+    
+}
 
 
 .main{
@@ -158,11 +159,11 @@ a img.img{
     background-image: linear-gradient(90deg, rgba(233, 237, 241, 0) 20%, black);
     transform: rotate(180deg);
 }
-form{
+main form{
     position: relative;
     bottom: 20px;
 }
-input{
+main input{
     border: none;
     width: 90%;
     border-radius: 10px;
@@ -255,8 +256,8 @@ input#password.texto{
     
     .google-celu{
         border: 1px solid black;
-        width: 90%;
-        height: 38px;
+        width: 85%;
+        height: 20px;
         text-align: center;
         margin: 10px 15px;
         padding: 8px;
@@ -307,7 +308,7 @@ input#password.texto{
         width: 100%;
         padding: 20px;
     }
-    form{
+    main form{
         width: 100%;
         display: flex;
         flex-wrap: wrap;

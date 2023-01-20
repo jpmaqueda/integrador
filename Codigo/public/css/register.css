@@ -1,46 +1,29 @@
 *{
-    box-sizing: border-box;
+    
     margin: 0;
     text-decoration: none;
-    
     font-family: 'Roboto', sans-serif;
 }
-header{
-    background-color: #5c5855;
+:not(.main-header,header p,header a, header input,header div,header li){
+    box-sizing: border-box;
     
-    
-}
-header .img{
-    padding: 2px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 5px;
-    margin-left: 10px;
-    
-    transition: 500ms all;
-    ;
-}
-.img:hover{
-    border-color: orange;
-    transform: scale(1.1);
 }
 main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #D5D8DC ;
+    background: white ;
 }
 .conteiner{
     
     background-color: #F8F9F9;
-    margin: 40px 0;
+    margin: 40px 0 0;
     padding: 14px 18px;
     border:1px solid black;
     border-bottom: transparent;
     border-radius: 10px 10px 0px 0px;
     width: 90%;
-    height: 600px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     box-shadow: inset 10px 10px 44px -33px rgba(0,0,0,0.75);
@@ -117,7 +100,7 @@ a.google-celu img{
     align-items: center;
     justify-content: space-around;
     position: relative;
-    bottom: 40px;
+    bottom: 0px;
     border: 1px solid black;
     border-radius: 0px 0px 10px 10px;
     background-color: #F8F9F9;
@@ -129,7 +112,7 @@ a.google-celu img{
 p.condiciones{
     margin-top: 20px;
 }
-input:focus{
+main input:focus{
     outline:none;
 }
 
@@ -148,7 +131,7 @@ input:focus{
     }
     .caja2{
         width:50%;
-        bottom:10px
+        bottom:0px
     }
     header .img{
         margin-left: 40px;
@@ -163,12 +146,13 @@ input:focus{
 @media(min-width:1024px){
     div.conteiner{
         width: 30%;
-        margin: 20px 360px;
+        margin: 20px 360px 0;
+        height: 630px;
         
     }
     .caja2{
         width:30%;
-        bottom: 20px;
+        bottom: 0;
         margin: 0px 360px;
         
         
