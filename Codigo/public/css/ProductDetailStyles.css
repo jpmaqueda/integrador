@@ -1,16 +1,20 @@
 *{
     margin: 0px;
     padding: 0px;
-    /* box-sizing: border-box; */
+    
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
   
 }
 
+main{
+    max-width: 1200px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
 h3{
     text-align: center;
     margin: 5px auto;
@@ -27,6 +31,7 @@ h3{
 
 header{
     text-align: center;
+
 }
 
 .div-desplegables p{
@@ -36,11 +41,35 @@ header{
 
 }
 
+.top-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;   
+}
+
+.cajas-top-section1{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.cajas-top-section2{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.cajas-top-section3{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
 
  .img-carrusel{
     border-radius: 15%;
-    width: 350px;
-    margin: 9px auto;  
+    width: 100%;
+    margin: 9px auto; 
+    object-fit: cover; 
  
 }
 
@@ -72,10 +101,9 @@ section div.envio div.input{
     background-color: #FFF;
     outline: none;
     color: #666;
-    padding: 2px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    width: 173px;
+    padding: 8px;
+    margin-bottom: 17px;
+    border-radius: 30px;
 }
 
 section div.envio div.submit{
@@ -190,31 +218,11 @@ footer nav ul li{
 
 
 @media (min-width: 480px){
+    .cajas-top-section1, .cajas-top-section2{
+        width: 45%;
+        justify-content: space-between;
+    }
 
-.top-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.IMG-Producto{  
-    margin: 0px 4px;
-    
-}
-
-.IMG{
-    width: 50%;
-}
-
-.img-carrusel, .IMG-Producto{
-    width: 45vw;
-}
-.envio{
-    width: 80%;
-    text-align: center;
-}
 
 .div-desplegables {
     margin: 30px auto;
@@ -224,11 +232,21 @@ footer nav ul li{
 .fa-solid, .fas{
     text-align: center;
 }
-
-section div.envio div.input{
-    text-align: center;
-    width:auto;
+.cajas-top-section3{
+    width: 80%;
+    margin-bottom: 25px;
 }
+
+
+section div.envio{
+    text-align: center;
+    width:100%;
+}
+
+div.input{
+    width: auto;
+}
+
 
 .Icon-footer1 {
     text-align: center;
@@ -237,31 +255,13 @@ section div.envio div.input{
     margin: 15px;
 }
 
-
 }
 
-@media (min-width: 769px){
-
-    .top-section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        
+@media (min-width: 769px){  
+    .cajas-top-section1, .cajas-top-section2,.cajas-top-section3{
+       width: 30%;
+       justify-content: space-between;
     }
-    
-    .IMG-Producto{  
-        margin: 0px 4px;   
-    }
-/*     
-    .IMG{
-        width: 30.33%;
-    } */
-    
-    .img-carrusel, .IMG-Producto, .envio{
-        width: 30%;
-    }
-    
     .div-desplegables {
         margin: 30px auto;
         text-align: center;
@@ -307,12 +307,6 @@ section div.envio div.input{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        /* max-width: 1200px;
-        margin: auto;
-         */
-    }
-
-    body{
-        max-width: 1200px;
-        margin: auto;
-    }
+        
+    } 
+}
