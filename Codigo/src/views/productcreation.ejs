@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+    class="jsbin"
+    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+  ></script>
+  <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+  ></script>
+  <meta charset="utf-8" />
+
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+    article,
+    aside,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+  </style>
+
+
+<script>
+function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = function (e) {
+        $('#blah').attr('src', e.target.result);
+      };
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css\slider.css" />
+    <link rel="stylesheet" href="./css\categoria.css" />
+    <link rel="stylesheet" href="./css\cajaprod1.css" />
+    <link rel="stylesheet" href="./css\pc.css" />
+    <%- include('partial/head') %>
+    <link rel="stylesheet" href="./css\filtrosyorg.css" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/efecb5d88a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function myFunction() {
+        document.getElementById("dropdown").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction1() {
+        document.getElementById("dropdown1").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction2() {
+        document.getElementById("dropdown2").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction3() {
+        document.getElementById("dropdown3").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction4() {
+        document.getElementById("dropdown4").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction5() {
+        document.getElementById("dropdown5").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction6() {
+        document.getElementById("dropdown6").classList.toggle("show");
+      }
+    </script>
+    <script>
+      function myFunction7() {
+        document.getElementById("dropdown7").classList.toggle("show");
+      }
+    </script>
+
+    <script>
+      function switchVisible() {
+        if (document.getElementById("Div1")) {
+          if (document.getElementById("Div1").style.display == "none") {
+            document.getElementById("Div1").style.display = "flex";
+            document.getElementById("Div2").style.display = "none";
+          } else {
+            document.getElementById("Div1").style.display = "none";
+            document.getElementById("Div2").style.display = "block";
+          }
+        }
+      }
+    </script>
+    <script>
+        function switchVisiblevolver() {
+          if (document.getElementById("Div1")) {
+            if (document.getElementById("Div1").style.display == "none") {
+              document.getElementById("Div1").style.display = "flex";
+              document.getElementById("Div2").style.display = "none";
+            } else {
+              document.getElementById("Div1").style.display = "none";
+              document.getElementById("Div2").style.display = "block";
+            }
+          }
+        }
+      </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+  </head>
+  <body>
+    <header><%- include('partial/header') %></header>
+    <main>
+      <div class="mainbox">
+        <div class="contentbox" id="Div1">
+          <p class="titulo">Elige tu categoría</p>
+          <form class="formCat">
+            <input
+              type="button"
+              class="boton"
+              value="Dormitorio"
+              onclick="myFunction()"
+            />
+            <div class="drop" id="dropdown">
+              <input
+                type="button"
+                class="botondrop"
+                value="Camas"
+                onclick="switchVisible()"
+              />
+              <input type="button" class="botondrop" value="Mesas de Luz" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Armarios" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Alfonmbras" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Living"
+              onclick="myFunction1()"
+            />
+            <div class="drop" id="dropdown1">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estantería" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Cocina"
+              onclick="myFunction2()"
+            />
+            <div class="drop" id="dropdown2">
+              <input type="button" class="botondrop" value="Mesadas" onclick="switchVisible()"/>
+              <input
+                type="button"
+                class="botondrop"
+                value="electrodomésticos"
+                         />
+              <input type="button" class="botondrop" value="Hornos" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Cocinas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estanterías"onclick="switchVisible()" />
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Comedor"
+              onclick="myFunction3()"
+            />
+            <div class="drop" id="dropdown3">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estantería" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Jardín"
+              onclick="myFunction4()"
+            />
+            <div class="drop" id="dropdown4">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estantería" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Estudio"
+              onclick="myFunction5()"
+            />
+            <div class="drop" id="dropdown5">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estantería" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Baño"
+              onclick="myFunction6()"
+            />
+            <div class="drop" id="dropdown6">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Estantería" onclick="switchVisible()"/>
+            </div>
+            <input
+              type="button"
+              class="boton"
+              value="Niños"
+              onclick="myFunction7()"
+            />
+            <div class="drop" id="dropdown7">
+              <input type="button" class="botondrop" value="Mesas" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Sillones" onclick="switchVisible()"/>
+              <input type="button" class="botondrop" value="Mueble de TV"onclick="switchVisible()" />
+              <input type="button" class="botondrop" value="Estantería"onclick="switchVisible()" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="Div2" id="Div2">
+        <div class="mainbox">
+            <form class="contentbox">
+                <p class="titulo">Configura tu producto</p>
+        <input type="text" class="inputexto" placeholder="Nombre del producto">
+        <input type="number" class="inputexto" placeholder="Precio">
+        <input type="number" class="inputexto" placeholder="Stock">
+        <input type="text" class="inputexto" placeholder="Color">
+        <input type="text" class="inputexto" placeholder="Alto">
+        <input type="text" class="inputexto" placeholder="Profundidad">
+        <input type="text" class="inputexto" placeholder="Ancho">
+        <div class="inputexto">
+            <label for="files" class="foto">Seleciona una imagen</label>
+        <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files">
+        </div>
+<div class="noimg">
+    <img  class="cajaimg" id="blah" src="#" />
+</div>
+<input type="submit" class="boton" value="Enviar" />
+        <input type="button" class="boton" value="volver" onclick="switchVisiblevolver()"/>
+    </form>
+    </div>
+      </div>
+      
+    </main>
+    <footer></footer>
+  </body>
+</html>

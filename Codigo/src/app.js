@@ -12,6 +12,9 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 const indexRoutes=require('./routes/indexRoutes');
 app.use('/', indexRoutes)
 
+const pcRoutes=require('./routes/pcRoutes');
+app.use('/', pcRoutes)
+
 const loginRoutes=require('./routes/loginRoutes')
 app.use('/', loginRoutes)
 
