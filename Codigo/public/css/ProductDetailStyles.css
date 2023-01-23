@@ -13,7 +13,6 @@ body{
 main{
     max-width: 1200px;
     margin: 10px auto;
-    box-sizing: border-box;
 }
 h3{
     text-align: center;
@@ -67,7 +66,7 @@ header{
 
  .img-carrusel{
     border-radius: 15%;
-    width: 100%;
+    width: 350px;
     margin: 9px auto; 
     object-fit: cover; 
  
@@ -219,12 +218,6 @@ footer nav ul li{
 
 @media (min-width: 480px){
     .cajas-top-section1, .cajas-top-section2{
-        width: 45%;
-        justify-content: space-between;
-    }
-
-
-.div-desplegables {
     margin: 30px auto;
     text-align: center;
 }
