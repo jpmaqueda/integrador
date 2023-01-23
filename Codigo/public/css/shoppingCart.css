@@ -8,8 +8,8 @@
 		font-family: 'Roboto', sans-serif;
 	}
 	.contenedor{
-		width: 90%;
-		max-width: 1200px;
+		width: 95%;
+		max-width: auto;
 		margin: 20px auto;
 		display: grid;
 		grid-gap: 10px;
