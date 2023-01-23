@@ -63,12 +63,18 @@ header{
     text-align: center;
 }
 
+.IMG-Producto {
+    height: 100%;
+    display: contents;
+
+}
 
  .img-carrusel{
     border-radius: 15%;
-    width: 350px;
+    width: 90%;
     margin: 9px auto; 
     object-fit: cover; 
+    
  
 }
 
@@ -83,8 +89,13 @@ header{
         border: 0.5px gray solid;
         color: gray;
         padding: 7px;
+        cursor: pointer;
 }
 
+
+#color:hover{
+    font-weight: bold;
+}
 .caract-General{
       border-top: #666 1px ;
 }
@@ -103,6 +114,7 @@ section div.envio div.input{
     padding: 8px;
     margin-bottom: 17px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 section div.envio div.submit{
@@ -119,8 +131,12 @@ section div.envio div.submit{
     margin: 20px 20px;
     padding: 8px;
     color: white;
-    
+    cursor: pointer;
     }
+
+    .add-carrito:hover{
+        font-weight: bold;
+    }   
 .comprar{
     background-color: rgb(90, 90, 122);
     font-size: 17px;
@@ -129,10 +145,13 @@ section div.envio div.submit{
     margin: 20px 20px;
     padding: 8px;
     color: white;
+    cursor: pointer;
     
 }
 
-
+.comprar:hover{
+    font-weight: bold;
+}
 .cp{
     margin: 15px;
 }
@@ -163,63 +182,16 @@ div .cp .input{
     
 }
 
-/* --------------------------Footer---------------------------------------- */
-.Icon-footer {
-    text-align: center;
-    color:  rgb(90, 90, 122);
-    font-size: 2em;
-    margin: 15px;
-}
-
-.Icon-footer1 {
-    text-align: center;
-    color: rgb(90, 90, 122);
-    font-size: 2em;
-    margin: 15px;
-}
-
-.fa-solid, .fas:hover{
-    color: #181b3d;
-
-}
-
-.h3-footer {
-    margin: 2px;
-    padding: 5px;
-    text-align: center;
-}
-
- footer nav p{
-    margin: 5px;
-    text-decoration: none;
-}
-
-footer nav li h3{
-    color:black
-}
-
-footer nav ul li{
-    color:#666;;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.copyright{
-    padding-top: 50px;
-    color: #666;
-    list-style: none;
-    text-align: left;
-}
-
 
 
 
 
 @media (min-width: 480px){
+
     .cajas-top-section1, .cajas-top-section2{
-    margin: 30px auto;
-    text-align: center;
+        width: 40%;
+        margin: 25px auto;
+        text-align: center;
 }
 
 .fa-solid, .fas{
@@ -241,12 +213,7 @@ div.input{
 }
 
 
-.Icon-footer1 {
-    text-align: center;
-    color: #1259c3;
-    font-size: 2em;
-    margin: 15px;
-}
+
 
 }
 
@@ -261,35 +228,7 @@ div.input{
     }
     
     
-    .footer-desktop{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .Icon-footer {
-        display: flex;
-        align-items: center;
-        color: #1259c3;
-        font-size: 2em;
-        margin: 13px;
-    }
-    
-    .Icon-footer1 {
-        display: flex;
-        align-items: center;
-        color: #1259c3;
-        font-size: 2em;
-        margin: 13px;
-        padding: 0 7vw;
-        border-left: 5px solid gray;
-        border-right: 5px solid gray;
-    }
-    
-    
-    
-    
-}
+} 
 
 
 @media (min-width: 1280px){

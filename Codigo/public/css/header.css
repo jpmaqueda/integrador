@@ -63,6 +63,7 @@
     box-shadow: 1px 1px 5px 1px #868484;
     width: 100%;
     max-width: 500px;
+    margin: auto;
   }
   .navinferior {
     display: flex;
