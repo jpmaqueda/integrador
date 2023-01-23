@@ -15,14 +15,13 @@ app.use('/', indexRoutes)
 const pcRoutes=require('./routes/pcRoutes');
 app.use('/', pcRoutes)
 
-const loginRoutes=require('./routes/loginRoutes')
-app.use('/', loginRoutes)
-
 const productDetailRoutes=require('./routes/productDetailRoutes')
 app.use('/',productDetailRoutes)
 
-const registerRoutes=require('./routes/registerRoutes')
-app.use('/',registerRoutes)
+const users=require('./routes/users')
+app.use('/',users)
+app.use(express.urlencoded({ extended:false }));
+app.use(express.json());
 
 const shoppingCartRouter=require('./routes/shoppingCartRoutes')
 app.use('/',shoppingCartRouter)

@@ -3,5 +3,10 @@ const router=express.Router();
 const registerControllers=require('../controllers/registerControllers');
 
 router.get('/register', registerControllers.register);
+router.post('/register', registerControllers.guardarUsuario);
+
+router.get('/login',registerControllers.login)
+
+
 
 module.exports=router;
