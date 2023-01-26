@@ -22,14 +22,14 @@
     <main>
         <div class="conteiner">
             <h2>Creá tu cuenta</h2>
-            <form action="">
+            <form  method="POST" action="/register">
                 <div>
                     <label for="nombre">Ingrese nombre y apellido</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
                 </div>
                 <div>
                     <label for="numero-email">Ingrese número o correo electrónico</label>
-                    <input type="text" id="numero-email" name="numero-email" required>
+                    <input type="text" id="numero-email" name="numeroEmail" required>
                 </div>
                 <div>
                     <label for="contrasena">Ingrese contraseña</label>
@@ -42,10 +42,10 @@
                 <div class="crear">
                     <input type="submit" value="Crear">
                 </div>
-                
+                </form>
                     <a href="" class="google-celu"><img src="https://app.nudgify.com/images/google-logo.png" alt="">Crear con Google</a>
                     <p class="condiciones">Al crear una cuenta, aceptas las <a href="">Condiciones de Uso</a> y el <a href="">Aviso de Privacidad</a> de ElPortal.com.</p>
-            </form>
+            
         </div>
         <div class="caja2">
           <p>¿Ya tienes una cuenta? <a href="/login"> Iniciar sesión</a></p>  
