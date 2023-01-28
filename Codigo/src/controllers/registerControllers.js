@@ -8,6 +8,9 @@ const cuentas= JSON.parse(fs.readFileSync(cuentasFilePath,'utf-8'));
 const registerControllers={
     register:(req,res)=> res.render('register'),
     login:(req,res)=>res.render('login'),
+    cuentas:(req,res)=>{
+        res.render('cuentas',{cuentas})
+    },
 
     guardarUsuario: (req,res) => {
        const cuentas =getProductList(cuentasFilePath);
@@ -23,7 +26,7 @@ const registerControllers={
        cuentas.push(cuenta)
         
        fs.writeFileSync(cuentasFilePath, JSON.stringify(cuentas, null, 2));
-       return res.redirect("/");
+       return res.redirect("/cuentas");
     }
 }
 function getProductList(path) {

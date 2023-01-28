@@ -1,0 +1,29 @@
+*{
+    
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.titulo-cuenta{
+    margin: 50px;
+    
+}
+.cuentas{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    
+}
+.cuentas h2{
+    width: 100%;
+}
+a.cuenta{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 60px;
+    margin:20px 7px;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 10px;
+}

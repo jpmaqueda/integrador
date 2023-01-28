@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%- include('partial/head') %>
+    <link rel="stylesheet" href="css/cuentas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentas</title>
+</head>
+<body>
+    <%- include('partial/header') %>
+    <main>
+        <div class="cuentas">
+        <h2 class="titulo-cuenta">Estos son las <%= cuentas.length %> cuentas registradas</h2>
+        <% cuentas.forEach( cuenta =>{ %>
+            
+                <a class="cuenta" href="/cunetas/details/<%= cuenta.id %>">
+                    <article>
+                        <p>Nombre: <%= cuenta.nombre %></p>
+                        <p>Email: <%= cuenta.email %></p>
+                    </article>
+                </a>
+            
+
+        <% }) %>
+        </div>
+    </main>
+    <%- include('partial/footer') %>
+</body>
+</html>

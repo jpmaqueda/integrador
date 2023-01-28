@@ -5,5 +5,40 @@
     "email": "gianfrancosacchi@hotmail.com.ar",
     "contrasena": "b",
     "contrasena2": "b"
+  },
+  {
+    "id": 2,
+    "nombre": "valen Sacchi",
+    "email": "valen@gmail.com",
+    "contrasena": "a",
+    "contrasena2": "a"
+  },
+  {
+    "id": 3,
+    "nombre": "fran Sacchi",
+    "email": "valen@gmail.com",
+    "contrasena": "a",
+    "contrasena2": "a"
+  },
+  {
+    "id": 4,
+    "nombre": "ana Sacchi",
+    "email": "valen@gmail.com",
+    "contrasena": "a",
+    "contrasena2": "a"
+  },
+  {
+    "id": 5,
+    "nombre": "carlos Sacchi",
+    "email": "valen@gmail.com",
+    "contrasena": "a",
+    "contrasena2": "a"
+  },
+  {
+    "id": 6,
+    "nombre": "lucas Sacchi",
+    "email": "valen@gmail.com",
+    "contrasena": "a",
+    "contrasena2": "a"
   }
 ]
