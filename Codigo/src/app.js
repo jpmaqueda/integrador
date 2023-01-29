@@ -31,3 +31,6 @@ const shoppingCartRouter=require('./routes/shoppingCartRoutes')
 app.use('/',shoppingCartRouter)
 
 
+const peRoutes=require('./routes/peRoutes');
+app.use('/', peRoutes)
+

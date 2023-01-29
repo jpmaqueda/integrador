@@ -1,0 +1,103 @@
+.cajaGeneral{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.form{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: block;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    align-items: center;
+    min-width: 420px;
+}
+.cajaDeImagen{
+    display: flex ;
+    width: 100%;
+    height: auto;
+justify-content: center;
+align-items: center;}
+
+.titulo{
+    display: block;
+    font-size: 26px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+   text-align: center;
+    width: 90%;
+}
+    .camposform{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;  
+        width: 100%;
+        height: auto;
+       box-sizing: border-box;
+    }
+    .imagen{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        margin: 15px;
+        
+    }
+    .inputexto{
+        display: flex;
+        font-size: 20px;
+        height: 45px;
+        border: 1px solid gray;
+        width: 360px;
+        margin-bottom: 10px;
+        justify-content: center;cursor:pointer; }
+
+        .cambiaimg{
+            position: absolute;
+            display: flex;
+            justify-content: center;}
+        .label{
+            display: flex;
+            text-align: center;
+            padding: 5px;
+            height: auto;
+            justify-content: center;
+            margin-top: 5px;
+            cursor:pointer;
+            color: rgb(255, 255, 255);
+            font-weight: bolder;
+            ;
+        }
+        .inputextoimg{
+            display: flex;
+            font-size: 20px;
+            height: 45px;
+            border: 1px solid gray;
+            width: 100%;
+           align-items: center;
+           flex-direction: column;
+           justify-content: center;
+           border-radius: 500px;
+           background-color: black;
+           opacity: 0.7;
+           
+        }
+
+@media (min-width:1000px){
+    .form{
+        display: flex;
+    }
+.cajaDeImagen{
+    display: flex ;
+    width: 50%;
+    height: auto;
+    margin: 15px;
+    
+}
+.camposform{
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: 15px;
+}}
