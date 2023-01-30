@@ -17,20 +17,9 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 const indexRoutes=require('./routes/indexRoutes');
 app.use('/', indexRoutes)
 
-const pcRoutes=require('./routes/pcRoutes');
-app.use('/', pcRoutes)
-
-const productDetailRoutes=require('./routes/productDetailRoutes')
-app.use('/',productDetailRoutes)
-
 const users=require('./routes/users')
 app.use('/',users)
 
-
-const shoppingCartRouter=require('./routes/shoppingCartRoutes')
-app.use('/',shoppingCartRouter)
-
-
-const peRoutes=require('./routes/peRoutes');
-app.use('/', peRoutes)
+const products=require('./routes/products')
+app.use('/', products)
 

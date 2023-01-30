@@ -40,5 +40,19 @@
     "email": "valen@gmail.com",
     "contrasena": "a",
     "contrasena2": "a"
+  },
+  {
+    "id": 8,
+    "nombre": "seba",
+    "email": "sabe@hotmail.com",
+    "contrasena": "algo",
+    "contrasena2": "algp"
+  },
+  {
+    "id": 9,
+    "nombre": "Gianfranco Sacchi",
+    "email": "gianfrancosacchi@hotmail.com.ar",
+    "contrasena": "gina",
+    "contrasena2": "gian"
   }
 ]
