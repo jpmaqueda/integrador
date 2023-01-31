@@ -1,0 +1,31 @@
+.cajageneral{height: 400px;
+    background-color: white;
+    margin-top: 40px;
+ 
+
+}
+.cajatotallista{
+    display: flex;
+    height: 150px;
+    background-color: gray;
+    margin-top: 5px;
+    border: solid gray 2px;
+    border-radius: 200px;
+
+}
+.cajaimg{
+    height: auto;
+    width: 150px;
+    margin: 5px;
+    margin-left: 50px;
+    background-color: white;
+
+}
+.descripcion1{
+    display: flex;
+    width: 50%;
+    margin-left: 15%;
+    background-color: rebeccapurple;
+    height: auto;
+
+}
