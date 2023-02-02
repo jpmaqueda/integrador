@@ -21,23 +21,37 @@
     <%- include('partial/header') %>
     <main>
         <div class="conteiner">
+            
             <h2>Creá tu cuenta</h2>
-            <form action="/guardarUsuario"method="post" >
-                <div>
+            <form action="/guardarUsuario"method="post" enctype="multipart/form-data">
+                <div class="separacion">
                     <label for="nombre">Ingrese nombre y apellido</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
+                    <input type="text" id="nombre" name="nombre"value="<%= locals.oldData ? oldData.nombre : null %>"  
+                    <% if(locals.errors && errors.nombre){ %>
+                        placeholder="<%= errors.nombre.msg %>
+                    <% }else{ %>
+                        placeholder="Nombre y Apellido"
+                    <% } %>">
+                    
                 </div>
-                <div>
+                <div class="separacion">
                     <label for="numero-email">Ingrese número o correo electrónico</label>
-                    <input type="text" id="numero-email" name="email" required>
+                    <input type="text" id="numero-email" name="email" value="<%= locals.oldData ? oldData.email : null %>"> 
+                    
+                        <% if(locals.errors && errors.email){ %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
+                    
                 </div>
-                <div>
+                <div class="separacion">
                     <label for="contrasena">Ingrese contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena"required placeholder="Minimo 8 caracteres y una mayúscula">
+                    <input type="password" id="contrasena" name="contrasena"placeholder="Minimo 8 caracteres y una mayúscula">
                 </div>
-                <div>
+                <div class="separacion">
                     <label for="contrasena2">Ingrese nuevamente la contraseña</label>
-                    <input type="password" id="contrasena2" name="contrasena2" required >
+                    <input type="password" id="contrasena2" name="contrasena2"  >
                 </div>
                 <div class="crear">
                     <input type="submit" value="Crear">
