@@ -36,10 +36,22 @@
 <div class="cajageneral">
     <% productslectura.forEach(prod=>{%>
        <div class="cajatotallista">
-          <div class="cajaimg"
-           > 
+          <div class="cajaimg">
+            <img class="imagenes1" src="/imagenes/productos/<%= prod.img %>" alt=""> 
           </div>
-          <div class="descripcion1"></div>
+          
+            <p><%= prod.nombre %></p>
+                  
+            <p><%= prod.precio %>$</p>
+                    
+            <p><%= prod.stock %></p>
+          
+          
+            <p><%= prod.color %></p>
+          
+          
+            <p><%= prod.anchura %></p>
+          
       </div>
     <%})%>
           

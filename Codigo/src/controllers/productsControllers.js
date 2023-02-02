@@ -6,7 +6,6 @@ const productslectura = JSON.parse(fs.readFileSync(filepath, `utf-8`))
 
 const pcControllers={
     create:(req,res)=> res.render('productcreation'),
-    edit: (req, res) => res.render("productedit"),
     detail:(req,res)=> res.render('productDetail'),
     cart:(req,res)=> res.render('shoppingCart'),
     productadmin:(req,res)=> res.render('productsadmin', {productslectura}),
@@ -24,15 +23,22 @@ const pcControllers={
             img:req.file?.filename ? req.file.filename:"default image",
             categoria: req.body.categoria, 
             subcategoria: req.body.subcategoria, 
-
-            }
-            productregister.push(datosproducto)
-         
-            fs.writeFileSync(filepath, JSON.stringify(productregister, null, 2));
-            return res.redirect("/productsadmin")
-       
+            
+        }
+        productregister.push(datosproducto)
+        
+        fs.writeFileSync(filepath, JSON.stringify(productregister, null, 2));
+        return res.redirect("/productsadmin")
+        
+    },
+    edit: (req, res) =>{
+        const id=req.params.id;
+        const product= productslectura.find(product=>product.id==id); 
+        res.render("productedit",{product});
+    },
+    update:(req,res)=>{
+        
     }
-    
 }
 function getProductList(path) {
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));

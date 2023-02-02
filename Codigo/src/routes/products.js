@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 router.get("/productcreation",pcControllers.create);
 router.post("/store", upload.single("img") ,pcControllers.store);
 router.get("/productedit", pcControllers.edit);
+router.put('/productedit/:id',upload.single("img"),pcControllers.update)
 router.get('/productDetail',pcControllers.detail)
 router.get('/shoppingCart', pcControllers.cart);
 router.get('/productsadmin', pcControllers.productadmin);

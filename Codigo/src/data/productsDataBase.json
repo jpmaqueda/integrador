@@ -1,154 +1,24 @@
 [
   {
-    "id": 1,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": ""
-  },
-  {
-    "id": 2,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": ""
-  },
-  {
-    "id": 3,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 4,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 5,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 6,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 7,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 8,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 9,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 10,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 11,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
-    "id": 12,
-    "nombre": "12321",
-    "precio": "3213",
-    "stock": "123321",
-    "color": "321",
-    "altura": "321321",
-    "profundidad": "3212123",
-    "anchura": "312",
-    "img": "default image"
-  },
-  {
-    "id": 13,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
-    "img": "default image"
-  },
-  {
     "id": 14,
-    "nombre": "",
-    "precio": "",
-    "stock": "",
-    "color": "",
-    "altura": "",
-    "profundidad": "",
-    "anchura": "",
+    "nombre": "mesa",
+    "precio": "1000",
+    "stock": "10",
+    "color": "azul",
+    "altura": "10",
+    "profundidad": "10",
+    "anchura": "10",
     "img": "img-1675376629637-372967958.png"
+  },
+  {
+    "id": 15,
+    "nombre": "cama",
+    "precio": 1000,
+    "stock": 5,
+    "color": "VERDE",
+    "altura": 50,
+    "profundidad": 50,
+    "anchura": 50,
+    "img": "img-1675378714365-273814986.png"
   }
 ]
