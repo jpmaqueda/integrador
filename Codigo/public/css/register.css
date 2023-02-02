@@ -29,7 +29,7 @@ main{
     box-shadow: inset 10px 10px 44px -33px rgba(0,0,0,0.75);
 }
 
-.conteiner div{
+.conteiner .separacion{
     margin:10px 0
 }
 .conteiner h2{
@@ -53,6 +53,11 @@ main{
 .crear input{
     background-color: #EB984E;
     transition: all 500ms;
+}
+.text-danger{
+    color: red;
+    font-size: 15px;
+    margin: 0px 0px 0px 10px
 }
 a.google-celu{
     display: flex;
