@@ -21,6 +21,7 @@ const pcControllers={
             altura: req.body.altura,
             profundidad: req.body.profundidad,
             anchura: req.body.anchura,
+            img:req.file?.filename ? req.file.filename:"default image"
             }
             productregister.push(datosproducto)
          

@@ -8,5 +8,147 @@
     "altura": "",
     "profundidad": "",
     "anchura": ""
+  },
+  {
+    "id": 2,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": ""
+  },
+  {
+    "id": 3,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 4,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 5,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 6,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 7,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 8,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 9,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 10,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 11,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 12,
+    "nombre": "12321",
+    "precio": "3213",
+    "stock": "123321",
+    "color": "321",
+    "altura": "321321",
+    "profundidad": "3212123",
+    "anchura": "312",
+    "img": "default image"
+  },
+  {
+    "id": 13,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "default image"
+  },
+  {
+    "id": 14,
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "color": "",
+    "altura": "",
+    "profundidad": "",
+    "anchura": "",
+    "img": "img-1675376629637-372967958.png"
   }
 ]

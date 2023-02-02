@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
       cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     }
   })
-  const upload = multer({ storage: storage })
+  const upload = multer({storage})
 
 
 router.get("/productcreation",pcControllers.create);

@@ -22,4 +22,3 @@ app.use('/',users)
 
 const products=require('./routes/products')
 app.use('/', products)
-
