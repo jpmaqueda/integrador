@@ -15,22 +15,23 @@ const pcControllers={
         const datosproducto={
             id: productregister.length > 0 ? productregister[productregister.length -1].id + 1 : 1,
             nombre: req.body.nombre,
-            precio: req.body.precio,
-            stock: req.body.stock,
+            precio: Number(req.body.precio),
+            stock: Number(req.body.stock),
             color: req.body.color,
-            altura: req.body.altura,
-            profundidad: req.body.profundidad,
-            anchura: req.body.anchura,
-            img:req.file?.filename ? req.file.filename:"default image"
+            altura: Number(req.body.altura),
+            profundidad: Number(req.body.profundidad),
+            anchura: Number(req.body.anchura),
+            img:req.file?.filename ? req.file.filename:"default image",
+            categoria: req.body.categoria, 
+            subcategoria: req.body.subcategoria, 
+
             }
             productregister.push(datosproducto)
          
             fs.writeFileSync(filepath, JSON.stringify(productregister, null, 2));
             return res.redirect("/productsadmin")
-
-        
+       
     }
-
     
 }
 function getProductList(path) {
