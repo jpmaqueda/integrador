@@ -23,35 +23,69 @@
         <div class="conteiner">
             
             <h2>Creá tu cuenta</h2>
-            <form action="/guardarUsuario"method="post" enctype="multipart/form-data">
+            <form action="/register" method="post" >
                 <div class="separacion">
                     <label for="nombre">Ingrese nombre y apellido</label>
-                    <input type="text" id="nombre" name="nombre"value="<%= locals.oldData ? oldData.nombre : null %>"  
+                    <input 
+                    type="text"
+                    id="nombre" 
+                    name="nombre"
+                    class="<%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.nombre : null %>"
+                    
+                    
                     <% if(locals.errors && errors.nombre){ %>
-                        placeholder="<%= errors.nombre.msg %>
+                        
+                        placeholder="<%= errors.nombre.msg %>"
+                        
                     <% }else{ %>
-                        placeholder="Nombre y Apellido"
-                    <% } %>">
-                    
-                </div>
-                <div class="separacion">
-                    <label for="numero-email">Ingrese número o correo electrónico</label>
-                    <input type="text" id="numero-email" name="email" value="<%= locals.oldData ? oldData.email : null %>"> 
-                    
-                        <% if(locals.errors && errors.email){ %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                        <% } %>
-                    
+                        placeholder="nombre y apellido"
+                            
+                    <% } %> 
+                     >   
+                    </div>
+                    <div class="separacion">
+                        <label for="numero-email">Ingrese correo electrónico</label>
+                    <input 
+                    type="text" 
+                    id="numero-email" 
+                    name="email"
+                    class="<%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %>"
+
+                    <% if(locals.errors && errors.email){ %>
+                        placeholder="<%= errors.email.msg %>"                
+                        <% }else{ %>
+                            placeholder="email"
+                        <% } %> 
+                    > 
                 </div>
                 <div class="separacion">
                     <label for="contrasena">Ingrese contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena"placeholder="Minimo 8 caracteres y una mayúscula">
+                    <input 
+                    type="password" 
+                    id="contrasena" 
+                    name="contrasena"
+                    class="<%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                    <% if(locals.errors && errors.contrasena){ %>
+                        placeholder="<%= errors.contrasena.msg %>"
+                    <% }else{ %>
+                        placeholder="Minimo 8 caracteres y una mayúscula"        
+                    <% } %> 
+                    >
                 </div>
                 <div class="separacion">
                     <label for="contrasena2">Ingrese nuevamente la contraseña</label>
-                    <input type="password" id="contrasena2" name="contrasena2"  >
+                    <input 
+                    type="password" 
+                    id="contrasena2" 
+                    name="contrasena2"
+                    class="<%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                    <% if(locals.errors && errors.contrasena2){ %>
+                        placeholder="<%= errors.contrasena2.msg %>"
+                        
+                    <% } %>
+                    >
                 </div>
                 <div class="crear">
                     <input type="submit" value="Crear">

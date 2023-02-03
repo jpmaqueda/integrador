@@ -3,7 +3,7 @@ const path=require('path');
 
 const cuentasFilePath = path.join(__dirname,'../data/cuentasDataBase.json');
 const cuentas= JSON.parse(fs.readFileSync(cuentasFilePath,'utf-8'));
-const {validationResult}=require('express-validator')
+const { validationResult }=require('express-validator')
 
 const usersControllers={
     register:(req,res)=> res.render('register'),
@@ -13,28 +13,29 @@ const usersControllers={
     },
 
     guardarUsuario: (req,res) => {
-       const resultValidation= validationResult(req);
-
-       if(resultValidation.errors.length > 0){
-        return res.render('register',{
-            errors:resultValidation.mapped(),
-            oldData:req.body
-        })
-       }
-       const cuentas =getProductList(cuentasFilePath);
-       
-       const cuenta={
-        id: cuentas.length > 0 ? cuentas[cuentas.length -1].id + 1 : 1,
-        nombre: req.body.nombre,
-        email: req.body.email,
-        contrasena: req.body.contrasena,
-        contrasena2: req.body.contrasena2
-       }
-       
-       cuentas.push(cuenta)
+        const cuentas =getProductList(cuentasFilePath);
         
-       fs.writeFileSync(cuentasFilePath, JSON.stringify(cuentas, null, 2));
-       return res.redirect("/cuentas");
+        const cuenta={
+            id: cuentas.length > 0 ? cuentas[cuentas.length -1].id + 1 : 1,
+            nombre: req.body.nombre,
+            email: req.body.email,
+            contrasena: req.body.contrasena,
+            contrasena2: req.body.contrasena2
+        }
+
+        const resultValidation = validationResult(req);
+        
+        if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+        
+        cuentas.push(cuenta)
+        
+        fs.writeFileSync(cuentasFilePath, JSON.stringify(cuentas, null, 2));
+        return res.redirect("/cuentas");
     }
 }
 function getProductList(path) {
