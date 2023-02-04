@@ -44,7 +44,7 @@ const pcControllers={
             img:req.file?.filename ? req.file.filename:"default image"
 
         }
-        guardarProductos(datosproducto)
+        guardarProducto(datosproducto)
         return res.redirect('/productsadmin')
     }
 

@@ -78,7 +78,7 @@
     <main>
       <% if(typeof product != "undefined"){%>
       <nav class="cajaGeneral">
-        <form class="form" action="" enctype="multipart/form-data">
+        <form class="form" action="/productedit/<%= product.id %>?_method=PUT" method="POST" >
           <div class="cajaDeImagen">
             <img class="imagen" src="/imagenes/productos/<%= product.img%>">
             <div class="cambiaimg">
