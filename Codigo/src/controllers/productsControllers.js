@@ -37,11 +37,35 @@ const pcControllers={
         res.render("productedit",{product});
     },
     update:(req,res)=>{
-        
+        const id = req.params.id;
+        const datosproducto = {
+            id,
+            ...req.body,
+            img:req.file?.filename ? req.file.filename:"default image"
+
+        }
+        guardarProductos(datosproducto)
+        return res.redirect('/productsadmin')
     }
+
+
 }
 function getProductList(path) {
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));
+}
+
+function guardarProducto (productToStore) {
+
+	const products = getProductList(filepath);
+
+	const productList = products.map(prod => {
+		if(prod.id == productToStore.id) {
+			return productToStore
+		}
+		return prod;
+	});
+
+	fs.writeFileSync(filepath, JSON.stringify(productList, null, 2));
 }
 
 module.exports=pcControllers
