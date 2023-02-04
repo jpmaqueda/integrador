@@ -46,14 +46,14 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css\slider.css" />
-    <link rel="stylesheet" href="./css\categoria.css" />
-    <link rel="stylesheet" href="./css\cajaprod1.css" />
-    <link rel="stylesheet" href="./css\pe.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css\slider.css" />
+    <link rel="stylesheet" href="../../css\categoria.css" />
+    <link rel="stylesheet" href="../../css\cajaprod1.css" />
+    <link rel="stylesheet" href="../../css\pe.css" />
+    <link rel="stylesheet" href="../../footer.css" />
     <%- include('partial/head') %>
-    <link rel="stylesheet" href="./css\filtrosyorg.css" />
+    <link rel="stylesheet" href="../../css\filtrosyorg.css" />
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,7 +90,7 @@
         
           <div class="camposform">
             <p class="titulo">Configura tu producto</p>
-        <input type="text" class="inputexto" placeholder="Nombre del producto">
+        <input type="text" class="inputexto" value="<%= datosproducto.nombre%>">
         <input type="number" class="inputexto" placeholder="Precio">
         <input type="number" class="inputexto" placeholder="Stock">
         <input type="text" class="inputexto" placeholder="Color">
