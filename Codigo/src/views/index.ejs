@@ -67,30 +67,33 @@
         </ul>
       </div>
       <div class="columnas">
-      <nav class="cajadecaja">
-        <nav class="menufiltro2"> </nav>
-        <div class="columna1">
-          <div class="preciodesc">
-        <div class="imagenboxcontainer">
-          <div class="opacity">
-        </div>
-        <p class="promo">PROMOCION</p>
-            <img class="imagencaja" src="imagenes\sideboards-data.jpg">
-      </div>
-      <p class="descripcion">DESCRIPCION</p>
-      <p class="precio">£1.500</p>
-    </div>
-    <div class="preciodesc">
-      <div class="imagenboxcontainer">
-        <div class="opacity">
-      </div>
-      <p class="promo">PROMOCION</p>
-          <img class="imagencaja" src="imagenes\livingroom-data.jpg">
-    </div>
-    <p class="descripcion">DESCRIPCION</p>
-    <p class="precio">£1.500</p>
-  </div>
-  <div class="preciodesc">
+       
+          <nav class="cajadecaja">
+            <nav class="menufiltro2"> </nav>
+            <div class="columna1">
+              <% productslectura.forEach(prod=>{%>
+              <div class="preciodesc">
+                <div class="imagenboxcontainer">
+                  <div class="opacity">
+                  </div>
+                  <p class="promo">PROMOCION</p>
+                  <img class="imagencaja" src="imagenes\productos/<%= prod.img %>">
+                </div>
+                <p class="descripcion"><%= prod.nombre.toUpperCase() %></p>
+                <p class="precio"><%= prod.precio%>$</p>
+              </div>
+              <% })%>
+              <div class="preciodesc">
+                <div class="imagenboxcontainer">
+                  <div class="opacity">
+                  </div>
+                  <p class="promo">PROMOCION</p>
+                  <img class="imagencaja" src="imagenes\livingroom-data.jpg">
+                </div>
+                <p class="descripcion">DESCRIPCION</p>
+                <p class="precio">£1.500</p>
+              </div>
+              <div class="preciodesc">
     <div class="imagenboxcontainer">
       <div class="opacity">
     </div>

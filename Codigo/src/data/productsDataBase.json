@@ -20,5 +20,16 @@
     "profundidad": 50,
     "anchura": 50,
     "img": "img-1675378714365-273814986.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Tu vieja",
+    "precio": 123,
+    "stock": 1,
+    "color": "Negro",
+    "altura": 666,
+    "profundidad": 420,
+    "anchura": 888,
+    "img": "img-1675540733597-551299172.jpg"
   }
 ]
