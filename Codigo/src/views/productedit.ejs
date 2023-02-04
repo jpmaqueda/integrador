@@ -76,10 +76,11 @@
   <body>
     <header><%- include('partial/header') %></header>
     <main>
+      <% if(typeof product != "undefined"){%>
       <nav class="cajaGeneral">
         <form class="form" action="" enctype="multipart/form-data">
           <div class="cajaDeImagen">
-            <img class="imagen" src="imagenes\livingroom-data.jpg">
+            <img class="imagen" src="/imagenes/productos/<%= product.img%>">
             <div class="cambiaimg">
               <div class="inputextoimg">
                 <label for="files" class="label">Seleciona una imagen</label>
@@ -90,20 +91,21 @@
         
           <div class="camposform">
             <p class="titulo">Configura tu producto</p>
-        <input type="text" class="inputexto" value="<%= datosproducto.nombre%>">
-        <input type="number" class="inputexto" placeholder="Precio">
-        <input type="number" class="inputexto" placeholder="Stock">
-        <input type="text" class="inputexto" placeholder="Color">
-        <input type="text" class="inputexto" placeholder="Alto">
-        <input type="text" class="inputexto" placeholder="Profundidad">
-        <input type="text" class="inputexto" placeholder="Ancho">
+        <input type="text" class="inputexto" value="<%= product.nombre%>">
+        <input type="number" class="inputexto" value="<%= product.precio%>">
+        <input type="number" class="inputexto" value="<%= product.stock%>">
+        <input type="text" class="inputexto" value="<%= product.color%>">
+        <input type="text" class="inputexto" value="<%= product.altura%>">
+        <input type="text" class="inputexto" value="<%= product.profundidad%>">
+        <input type="text" class="inputexto" value="<%= product.anchura%>">
         <input type="submit" class="inputexto" value="Enviar" />
           </div>
         </form>
       </nav>
-<footer>
-  <%- include('partial/footer') %>
-</footer>
+      <% }%>
     </main>
+    <footer>
+      <%- include('partial/footer') %>
+    </footer>
   </body>
 </html>
