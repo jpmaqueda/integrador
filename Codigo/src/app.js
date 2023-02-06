@@ -1,8 +1,8 @@
 /*          REQUIRE'S             */
 const express = require('express');
 const path=require('path');
-const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
 const session =require('express-session');
+const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
 const PORT=3000;
 
 /*          EXPRESS               */

@@ -19,7 +19,7 @@ router.get("/productcreation",pcControllers.create);
 router.post("/store", upload.single("img") ,pcControllers.store);
 router.get("/productedit/:id", pcControllers.edit);
 router.put('/productedit/:id',upload.single("img"),pcControllers.update)
-router.get('/productDetail',pcControllers.detail)
+router.get('/productDetail/:id?',pcControllers.detail)
 router.get('/shoppingCart', pcControllers.cart);
 router.get('/productsadmin', pcControllers.productadmin);
 

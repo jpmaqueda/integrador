@@ -1,17 +1,17 @@
 [
   {
-    "id": 14,
-    "nombre": "mesa",
-    "precio": "1000",
+    "id": "1",
+    "nombre": "sillon",
+    "precio": "500",
     "stock": "10",
-    "color": "azul",
-    "altura": "10",
-    "profundidad": "10",
-    "anchura": "10",
-    "img": "img-1675376629637-372967958.png"
+    "color": "rojo pasión",
+    "altura": "1000",
+    "profundidad": "1002",
+    "anchura": "1000",
+    "img": "img-1675645254314-234406870.jpg"
   },
   {
-    "id": 15,
+    "id": 2,
     "nombre": "cama",
     "precio": 1000,
     "stock": 5,
@@ -22,7 +22,7 @@
     "img": "img-1675378714365-273814986.png"
   },
   {
-    "id": 16,
+    "id": 3,
     "nombre": "Tu vieja",
     "precio": 123,
     "stock": 1,
@@ -31,5 +31,38 @@
     "profundidad": 420,
     "anchura": 888,
     "img": "img-1675540733597-551299172.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "ratona",
+    "precio": "1232",
+    "stock": "1",
+    "color": "verde moco",
+    "altura": "100",
+    "profundidad": "100",
+    "anchura": "100",
+    "img": "img-1675645833627-891082537.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "cama",
+    "precio": "1000",
+    "stock": "21",
+    "color": "azul agua",
+    "altura": "10",
+    "profundidad": "10",
+    "anchura": "10",
+    "img": "img-1675645477458-270342202.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "silla",
+    "precio": 21212,
+    "stock": 1,
+    "color": "marron",
+    "altura": 20,
+    "profundidad": 102,
+    "anchura": 202,
+    "img": "img-1675646055840-52774347.jpg"
   }
 ]

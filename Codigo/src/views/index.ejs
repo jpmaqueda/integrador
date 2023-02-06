@@ -72,16 +72,18 @@
             <nav class="menufiltro2"> </nav>
             <div class="columna1">
               <% productslectura.forEach(prod=>{%>
-              <div class="preciodesc">
+                <a href="/productDetail/<%= prod.id %> ">
+                <div class="preciodesc">
                 <div class="imagenboxcontainer">
                   <div class="opacity">
                   </div>
                   <p class="promo">PROMOCION</p>
                   <img class="imagencaja" src="imagenes\productos/<%= prod.img %>">
                 </div>
-                <p class="descripcion"><%= prod.nombre.toUpperCase() %></p>
+                <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
                 <p class="precio"><%= prod.precio%>$</p>
               </div>
+              </a>
               <% })%>
               <div class="preciodesc">
                 <div class="imagenboxcontainer">

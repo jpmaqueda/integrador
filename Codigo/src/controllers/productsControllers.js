@@ -1,4 +1,4 @@
-const fs = require(`fs`)
+const fs = require('fs')
 const path = require(`path`)
 const filepath = path.join(__dirname, "../data/productsDataBase.json")
 
@@ -6,7 +6,12 @@ const productslectura = JSON.parse(fs.readFileSync(filepath, `utf-8`))
 
 const pcControllers={
     create:(req,res)=> res.render('productcreation'),
-    detail:(req,res)=> res.render('productDetail'),
+    detail:(req,res)=> {
+        const id=req.params.id;
+        const product= productslectura.find(product=>product.id==id);
+        res.render('productDetail',{product})
+    },
+    
     cart:(req,res)=> res.render('shoppingCart'),
     productadmin:(req,res)=> res.render('productsadmin', {productslectura}),
     store:(req,res)=> {
@@ -37,11 +42,18 @@ const pcControllers={
         res.render("productedit",{product});
     },
     update:(req,res)=>{
-        const id = req.params.id;
+        const id=Number(req.params.id);
+        
+        const product= productslectura.find(product=>{
+            if(product.id==id){
+                return product
+            }
+        });
+        
         const datosproducto = {
             id,
             ...req.body,
-            img:req.file?.filename ? req.file.filename:"default image"
+            img:req.file?.filename ? req.file.filename : product.img
 
         }
         guardarProducto(datosproducto)
@@ -54,7 +66,7 @@ function getProductList(path) {
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));
 }
 
-function guardarProducto (productToStore) {
+function guardarProducto(productToStore) {
 
 	const products = getProductList(filepath);
 

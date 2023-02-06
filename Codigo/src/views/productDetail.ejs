@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Portal</title>
     <script src="https://kit.fontawesome.com/51bfd03ccb.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="/CSS/ProductDetailStyles.css">
+    <%- include('partial/head')  %> 
+    <link rel="stylesheet" href="/CSS/ProductDetailStyles.css">
      <link rel="stylesheet" href="./css\header.css" />
      <link rel="stylesheet" href="css/footer.css"> 
     
@@ -15,16 +16,17 @@
     
   <%- include('partial/header') %>
 <main>
+    <% if(typeof product != "undefined"){%>
     <section class="top-section">
 
              <div class="cajas-top-section1">   
-                <img class="img-carrusel" src="/imagenes/IMG_20220909_160730596.jpg" alt="Imagen Producto Seleccionado">
+                <img class="img-carrusel" src="/imagenes/productos/<%= product.img  %> " alt="Imagen Producto Seleccionado">
             </div>    
     
             <div class="cajas-top-section2">
             <div class="IMG-Producto">
 
-                <h3>Taburete Malcom Guayubira</h3>
+                <h3 style="text-transform: uppercase;"><%= product.nombre %></h3>
 
                     <div class="div-desplegables">
                         <p> Color Estructura </p>           
@@ -59,7 +61,7 @@
             <div class="cajas-top-section3">
             <div class="envio">
                 <div>
-                    <h2>$13.000,00</h2>
+                    <h2>$<%= product.precio %> </h2>
                         <div class="cp">
                             <i class="fas fa-truck"> </i> "Valor Envio $"
                                 <div class="form" action="#" method="GET" >
@@ -96,6 +98,7 @@
                 </p>
         </div>
     </section>
+    <% }%>
 </main>
 <%- include('partial/footer') %>
     <!-- <section>

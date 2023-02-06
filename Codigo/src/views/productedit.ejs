@@ -78,26 +78,26 @@
     <main>
       <% if(typeof product != "undefined"){%>
       <nav class="cajaGeneral">
-        <form class="form" action="/productedit/<%= product.id %>?_method=PUT" method="POST" >
+        <form class="form" action="/productedit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
           <div class="cajaDeImagen">
             <img class="imagen" src="/imagenes/productos/<%= product.img%>">
             <div class="cambiaimg">
               <div class="inputextoimg">
                 <label for="files" class="label">Seleciona una imagen</label>
-            <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files">
+            <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files" name="img">
             </div>
             </div>
           </div>
         
           <div class="camposform">
             <p class="titulo">Configura tu producto</p>
-        <input type="text" class="inputexto" value="<%= product.nombre%>">
-        <input type="number" class="inputexto" value="<%= product.precio%>">
-        <input type="number" class="inputexto" value="<%= product.stock%>">
-        <input type="text" class="inputexto" value="<%= product.color%>">
-        <input type="text" class="inputexto" value="<%= product.altura%>">
-        <input type="text" class="inputexto" value="<%= product.profundidad%>">
-        <input type="text" class="inputexto" value="<%= product.anchura%>">
+        <input type="text" class="inputexto" name="nombre" placeholder="nombre" value="<%= product.nombre %>">
+        <input type="number" class="inputexto" name="precio"placeholder="precio" value="<%= product.precio %>">
+        <input type="number" class="inputexto" name="stock"placeholder="stock" value="<%= product.stock %>">
+        <input type="text" class="inputexto" name="color"placeholder="color" value="<%= product.color %>">
+        <input type="text" class="inputexto" name="altura"placeholder="altura" value="<%= product.altura %>">
+        <input type="text" class="inputexto" name="profundidad"placeholder="profundidad" value="<%= product.profundidad %>">
+        <input type="text" class="inputexto"  name="anchura"placeholder="anchura" value="<%= product.anchura %>">
         <input type="submit" class="inputexto" value="Enviar" />
           </div>
         </form>
