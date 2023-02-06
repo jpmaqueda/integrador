@@ -54,5 +54,12 @@
     "email": "gianfrancosacchi@hotmail.com.ar",
     "contrasena": "gina",
     "contrasena2": "gian"
+  },
+  {
+    "id": 10,
+    "nombre": "Gianfranco Sacchi",
+    "email": "algo@g.com",
+    "contrasena": "Alagolago",
+    "contrasena2": "Aalgoalgo"
   }
 ]

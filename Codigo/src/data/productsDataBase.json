@@ -64,5 +64,16 @@
     "profundidad": 102,
     "anchura": 202,
     "img": "img-1675646055840-52774347.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "otra cama",
+    "precio": "10",
+    "stock": "5",
+    "color": "marron",
+    "altura": "10232",
+    "profundidad": "10",
+    "anchura": "10",
+    "img": "img-1675700248196-938744693.jpg"
   }
 ]
