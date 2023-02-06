@@ -58,6 +58,11 @@ const pcControllers={
         }
         guardarProducto(datosproducto)
         return res.redirect('/productsadmin')
+    },
+    delete:(req,res)=>{
+        
+        eliminarProducto(productslectura.id)
+        res.redirect('/productadmin')
     }
 
 
@@ -79,5 +84,12 @@ function guardarProducto(productToStore) {
 
 	fs.writeFileSync(filepath, JSON.stringify(productList, null, 2));
 }
+function eliminarProducto(id) {
+	let products = getProductList(productsFilePath);
 
+	products = products.filter( product => product.id != id);
+    
+
+	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+}
 module.exports=pcControllers

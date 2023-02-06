@@ -36,6 +36,9 @@
 <div class="cajageneral">
     <% productslectura.forEach(prod=>{%>
        <div class="cajatotallista">
+        <form action="/productsadmin/<%= prod.id %>?_method='DELETE'" method="post">
+        <button type="submit">ELIMINAR</button>
+        </form>
           <div class="cajaimg">
             <img class="imagenes1" src="/imagenes/productos/<%= prod.img %>" alt=""> 
           </div>
