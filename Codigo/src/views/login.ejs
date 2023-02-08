@@ -18,13 +18,34 @@
     <main class="login">
         <div class="main">
             <div class="info">
-               <form action="">
+               <form action="/login" method="POST">
                     <h1 class="titulo-celu">Bienvenidos</h1>
                     
                     
                     <h1 class="titulo-desktop">Iniciar sesión</h1>
-                    <input class="texto" type="text" id="usuario" name="usuario" placeholder="Dirección de correo electrónico o numero de teléfono">
-                    <input class="texto" type="password" id="password" name="password" placeholder="Contraseña">
+                    <input 
+                    class="texto <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    type="text" 
+                    id="usuario" 
+                    name="email" 
+                    <% if (locals.errors && errors.email) { %>
+                        placeholder="<%= errors.email.msg %>"
+                    <% } else { %>
+                        placeholder="Dirección de correo electrónico"
+                    <% } %>
+                    >
+                    <input 
+                    class="texto <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
+                    type="password" 
+                    id="password" 
+                    name="contrasena" 
+                    
+                    <% if (locals.errors && errors.contrasena) { %>
+                        placeholder="<%= errors.contrasena.msg %>"
+                    <% } else { %>
+                        placeholder="Contraseña"
+                    <% } %>
+                    >
                     <p><a class="olvidaste" href="https://viva-mundo.com/es/noticia/post/los-10-mejores-trucos-para-mejorar-tu-memoria-y-recordar-cualquier-cosa">¿Olvidate tu contraseña?</a></p>
                     <input class="ingresar" type="submit" value="Ingresar">
                     <a href="" class="google-celu"><img class="img" src="https://app.nudgify.com/images/google-logo.png" alt=""></i>Ingresar</a>

@@ -1,65 +1,10 @@
 [
+  
   {
     "id": 1,
     "nombre": "Gianfranco Sacchi",
     "email": "gianfrancosacchi@hotmail.com.ar",
-    "contrasena": "b",
-    "contrasena2": "b"
-  },
-  {
-    "id": 2,
-    "nombre": "valen Sacchi",
-    "email": "valen@gmail.com",
-    "contrasena": "a",
-    "contrasena2": "a"
-  },
-  {
-    "id": 3,
-    "nombre": "fran Sacchi",
-    "email": "valen@gmail.com",
-    "contrasena": "a",
-    "contrasena2": "a"
-  },
-  {
-    "id": 4,
-    "nombre": "ana Sacchi",
-    "email": "valen@gmail.com",
-    "contrasena": "a",
-    "contrasena2": "a"
-  },
-  {
-    "id": 5,
-    "nombre": "carlos Sacchi",
-    "email": "valen@gmail.com",
-    "contrasena": "a",
-    "contrasena2": "a"
-  },
-  {
-    "id": 6,
-    "nombre": "lucas Sacchi",
-    "email": "valen@gmail.com",
-    "contrasena": "a",
-    "contrasena2": "a"
-  },
-  {
-    "id": 8,
-    "nombre": "seba",
-    "email": "sabe@hotmail.com",
-    "contrasena": "algo",
-    "contrasena2": "algp"
-  },
-  {
-    "id": 9,
-    "nombre": "Gianfranco Sacchi",
-    "email": "gianfrancosacchi@hotmail.com.ar",
-    "contrasena": "gina",
-    "contrasena2": "gian"
-  },
-  {
-    "id": 10,
-    "nombre": "Gianfranco Sacchi",
-    "email": "algo@g.com",
-    "contrasena": "Alagolago",
-    "contrasena2": "Aalgoalgo"
+    "contrasena": "$2a$10$HkbvcQTdHF9Zu2eBcDT/NuT.CRLUzTLAUEQPxiMc2C9pTMAz/mrui",
+    "contrasena2": "todavia no funciona"
   }
 ]

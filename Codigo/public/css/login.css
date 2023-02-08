@@ -224,6 +224,18 @@ input#password.texto{
     
     box-shadow: 0px 0px 10px rgb(251, 128, 5);
 }
+.is-invalid::placeholder{
+    color:red;
+
+}
+input.is-invalid{
+    box-shadow: 0px 0px 10px rgb(216, 8, 8);
+}
+.text-danger{
+    color: red;
+    font-size: 15px;
+    margin: 0px 0px 0px 10px
+}
 /* i{
     color: black;
     font-weight: 30px;

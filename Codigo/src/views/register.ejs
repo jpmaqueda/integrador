@@ -52,7 +52,7 @@
                     name="email"
                     class="<%= locals.errors && errors.email ? 'is-invalid' : null %>"
                     value="<%= locals.oldData ? oldData.email : null %>"
-
+                    
                     <% if(locals.errors && errors.email){ %>
                         placeholder="<%= errors.email.msg %>"                
                         <% }else{ %>

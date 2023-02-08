@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%- include('partial/head')  %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu perfil</title>
+</head>
+<body>
+    <%- include('partial/header')  %>
+    <main>
+        <h2>Hola <%= user.nombre %> </h2>
+        <h2>Tu email es <%= user.email %> </h2>
+        <p>Campos adicionales</p>
+        <form action=""method="">
+            <div>
+                <label for="direccion">¿Quieres agregar una dirección para tu proximas compras?</label>
+                <input
+                id="direccion"
+                name="direccion"
+                type="text"
+                placeholder="Ingrese la direccion aqui">
+            </div>
+        </form>
+    </main>
+    <%- include('partial/footer')  %>
+</body>
+</html>
