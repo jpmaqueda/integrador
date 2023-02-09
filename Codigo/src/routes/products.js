@@ -12,5 +12,5 @@ router.put('/productedit/:id',upload.single("img"),pcControllers.update)
 router.get('/productDetail/:id?',pcControllers.detail)
 router.get('/shoppingCart', pcControllers.cart);
 router.get('/productsadmin', pcControllers.productadmin);
-router.delete('/productsadmin',pcControllers.delete)
+router.delete('/productsadmin/:id',pcControllers.delete)
 module.exports = router;

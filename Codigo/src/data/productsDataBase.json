@@ -1,38 +1,5 @@
 [
   {
-    "id": "1",
-    "nombre": "sillon",
-    "precio": "500",
-    "stock": "10",
-    "color": "rojo pasión",
-    "altura": "1000",
-    "profundidad": "1002",
-    "anchura": "1000",
-    "img": "img-1675645254314-234406870.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "cama",
-    "precio": 1000,
-    "stock": 5,
-    "color": "VERDE",
-    "altura": 50,
-    "profundidad": 50,
-    "anchura": 50,
-    "img": "img-1675378714365-273814986.png"
-  },
-  {
-    "id": 3,
-    "nombre": "Tu vieja",
-    "precio": 123,
-    "stock": 1,
-    "color": "Negro",
-    "altura": 666,
-    "profundidad": 420,
-    "anchura": 888,
-    "img": "img-1675540733597-551299172.jpg"
-  },
-  {
     "id": 4,
     "nombre": "ratona",
     "precio": "1232",
@@ -67,13 +34,16 @@
   },
   {
     "id": 7,
-    "nombre": "otra cama",
-    "precio": "10",
-    "stock": "5",
-    "color": "marron",
-    "altura": "10232",
-    "profundidad": "10",
-    "anchura": "10",
-    "img": "img-1675700248196-938744693.jpg"
+    "nombre": "mesa",
+    "precio": 10000,
+    "stock": 1000,
+    "color": "rojo",
+    "color2": "azul",
+    "color3": "verde",
+    "altura": 1000,
+    "profundidad": 1000,
+    "anchura": 1000,
+    "img": "img-1675901070603-213425486.png",
+    "descripcion": "rojorjorjor"
   }
 ]

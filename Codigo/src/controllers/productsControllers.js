@@ -27,7 +27,8 @@ const pcControllers={
             anchura: Number(req.body.anchura),
             img:req.file?.filename ? req.file.filename:"default image",
             categoria: req.body.categoria, 
-            subcategoria: req.body.subcategoria, 
+            subcategoria: req.body.subcategoria,
+            descripcion: req.body.descripcion,
             
         }
         productregister.push(datosproducto)
@@ -61,8 +62,8 @@ const pcControllers={
     },
     delete:(req,res)=>{
         
-        eliminarProducto(productslectura.id)
-        res.redirect('/productadmin')
+        eliminarProducto(req.params.id)
+        res.redirect('/productsadmin')
     }
 
 
@@ -85,11 +86,11 @@ function guardarProducto(productToStore) {
 	fs.writeFileSync(filepath, JSON.stringify(productList, null, 2));
 }
 function eliminarProducto(id) {
-	let products = getProductList(productsFilePath);
+	let products = getProductList(filepath);
 
 	products = products.filter( product => product.id != id);
     
 
-	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+	fs.writeFileSync(filepath, JSON.stringify(products, null, 2));
 }
 module.exports=pcControllers

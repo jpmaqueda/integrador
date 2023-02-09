@@ -35,10 +35,11 @@
 <main>
 <div class="cajageneral">
     <% productslectura.forEach(prod=>{%>
-       <div class="cajatotallista">
-        <form action="/productsadmin/<%= prod.id %>?_method='DELETE'" method="post">
-        <button type="submit">ELIMINAR</button>
-        </form>
+      <a href="/productedit/<%= prod.id %> "> 
+      <div class="cajatotallista">
+        
+        
+        
           <div class="cajaimg">
             <img class="imagenes1" src="/imagenes/productos/<%= prod.img %>" alt=""> 
           </div>
@@ -54,8 +55,12 @@
           
           
             <p><%= prod.anchura %></p>
-          
+            <form action="/productsadmin/<%= prod.id %>?_method=DELETE" method="post">
+            <% prod.id %>
+            <button type="submit" ><i class="fa-solid fa-trash"></i></button>
+          </form>
       </div>
+      </a>
     <%})%>
           
 
@@ -67,3 +72,8 @@
 
 </main>
   </body>
+  <script>
+    document.getElementById("myButton").addEventListener("click", function(){
+      alert("Button was clicked!");
+    });
+  </script>
