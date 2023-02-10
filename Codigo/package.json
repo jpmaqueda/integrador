@@ -26,6 +26,8 @@
 
     "bcryptjs": "^2.4.3",
 
+    "cookie-parser": "^1.4.6",
+
     "daemon": "^1.1.0",
 
     "ejs": "^3.1.8",

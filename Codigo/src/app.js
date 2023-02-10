@@ -2,9 +2,10 @@
 const express = require('express');
 const path=require('path');
 const session =require('express-session');
+const cookies =require('cookie-parser');
 const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
+const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware');
 const PORT=3000;
-
 /*          EXPRESS               */
 const app = express();
 
@@ -19,6 +20,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
 }))
+app.use(cookies());
+app.use(userLoggedMiddleware);
 
 /*         TEMPLATE ENGINE        */
 app.set('view engine', 'ejs');

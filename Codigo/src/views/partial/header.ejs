@@ -2,10 +2,11 @@
 
 <header class="main-header">
     <div class="navtop">
-      <div class="logopad">
-        <img src="/imagenes/Logo.jpg" class="logo" />
-      </div>
-
+      <a href="/">
+        <div class="logopad">
+          <img src="/imagenes/Logo.jpg" class="logo" />
+        </div>
+      </a>
       <nav class="locationbig">
         <a class="locationbigicon"
           ><i class="fa-sharp fa-solid fa-location-dot"></i>
@@ -17,9 +18,12 @@
       <nav class="search">
         <input type="text" placeholder="Buscar productos, marcas y mas..." />
       </nav>
+      <% if (locals.isLogged) { %>
+       
+      
       <nav class="options">
         <a href="/login" class="account"><i class="fa-solid fa-user"></i></a>
-        <p class="leyendaccount">Hola Juan, accede a tu cuenta</p>
+        <p class="leyendaccount">Hola <%= locals.userLogged.nombre %>, accede a tu perfil</p>
         <a class="ordenes"
           ><i class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i
         ></a>
@@ -27,7 +31,13 @@
         <a href="/shoppingCart" class="canastasup"
           ><i class="fa-sharp fa-solid fa-cart-shopping"></i
         ></a>
-      </nav>
+      
+      <% }else{ %>
+        <nav class="options login">
+        <a href="/login" class="account"><i class="fa-solid fa-user"></i></a>
+        <p class="leyendaccount">Accede a tu cuenta</p>
+        </nav>
+      <% } %>
     </div>
     <div class="navinferior">
       <div class="infizq">

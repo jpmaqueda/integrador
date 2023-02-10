@@ -12,16 +12,22 @@ const usersControllers={
     },
     
     login:(req,res)=>{
+        
         res.render('login')
     },
     loginProcess:(req,res)=>{
-        const userToLogin= user.findByField('email',req.body.email)
+        const userToLogin= user.findByField('email',req.body.email);
+
         if(userToLogin){
             let isOkThepassword=bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
             if(isOkThepassword){
                 delete userToLogin.contrasena
                 delete userToLogin.contrasena2
                 req.session.userLogged=userToLogin;
+
+                if(req.body.remember_users){
+                    res.cookie('userEmail', req.body.email, { maxAge:10000000000 });
+                }
                 return res.redirect('/profile')
             }else{
                 return res.render('login',{
@@ -46,7 +52,10 @@ const usersControllers={
     },
     
     
-    register:(req,res)=> res.render('register'),
+    register:(req,res)=>{
+        
+        return res.render('register')
+    },
     guardarUsuario: (req,res) => {
         const resultValidation = validationResult(req);
         
@@ -87,6 +96,7 @@ const usersControllers={
         })
     },
     logout:(req,res)=>{
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/login')
     }

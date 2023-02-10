@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.informacion1{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.titulo{
+    font-weight: bold;
+    font-size: 23px;
+}

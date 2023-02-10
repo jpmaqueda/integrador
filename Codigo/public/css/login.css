@@ -3,10 +3,11 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 
-:not(.main-header, p, a, header input,header div,header li){
+:not(.main-header,.logo, p, a, header input,header div,header li){
     box-sizing: border-box; 
     
 }
@@ -16,7 +17,7 @@
     display: flex;
     position: relative;
     justify-content:center;
-    margin: 30px;
+    margin:  30px;
     
 }
 
@@ -48,7 +49,7 @@
     font-size: 50px;
     position: relative;
     left: 18px;
-    margin: 20px 0;
+    margin: 20px 0 0;
 }
 .crear{
     border:none;
@@ -118,15 +119,26 @@
     border-radius: 15px;
     transition: 300ms;
 }
+.form-check-input{
+    display:block;
+    width: 20px;
+    margin: 0px 5px 0 15px  ;
+    
+}
+.botonCheck{
+    display: flex;
+    margin-top:10px ;
+}
+.botonCheck p{
+    font-size: 12px;
+}
 
-.google img{
+.img{
     width: 17px;
     height:17px ;
-}
-a img.img{
     position: relative;
     top: 2px;
-    width: 13px;
+    
     margin-right: 10px;
 }
 .google:hover{
@@ -185,7 +197,7 @@ input#password.texto{
 }
 .ayuda:hover{
     color: white;
-    text-decoration: underline;
+    
 }
 .ingresar{
     height: 38px;
@@ -195,7 +207,7 @@ input#password.texto{
 .ingresar:hover{
     
     color: white;
-    text-decoration: underline;
+    
     box-shadow: 0px 0px 10px black;
     cursor: pointer;
 }
@@ -337,5 +349,17 @@ input.is-invalid{
     }
     h1.titulo-celu{
         font-size: 25px;
+    }
+    input.form-check-input{
+        margin: 0px 5px 0px 20px;
+        width: auto;
+        display: inline-block;
+    }
+    .botonCheck {
+        width: 90%;
+        align-items: center;
+    }
+    .botonCheck p{
+        align-items: center;
     }
 }
