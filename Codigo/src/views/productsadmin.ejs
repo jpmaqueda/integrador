@@ -37,27 +37,49 @@
     <% productslectura.forEach(prod=>{%>
       <a href="/productedit/<%= prod.id %> "> 
       <div class="cajatotallista">
-        
-        
-        
-          <div class="cajaimg">
-            <img class="imagenes1" src="/imagenes/productos/<%= prod.img %>" alt=""> 
+        <div class="cajaimg">
+          <img class="imagenes1" src="/imagenes/productos/<%= prod.img %>" alt=""> 
+        </div>
+      <div class="cloumnbox">
+        <div class="nombrecampo">
+          <div class="divisores">
+<p class="campos1">DESCRIPCION</p>
+</div>
+<div class="divisores">
+<p class="campos1">COLOR</p>
+</div>
+<div class="divisores">
+<p class="campos1">PRECIO</p>
+</div>
+<div class="divisores">
+<p class="campos1">STOCK</p>
+</div>
+
+        </div>
+        <div class="autogen">
+          
+          <div class="cajainfo">
+            <div class="campos">
+              <p class="fonts"><%= prod.nombre.toUpperCase()%></p>
+
+            </div>
+            <div class="campos">
+            <p class="fonts"><%= prod.color.toUpperCase() %></p>
           </div>
+            <div class="campos">     
+            <p class="fonts"><%= prod.precio %>$</p>
+            </div>
+            <div class="campos">      
+            <p class="fonts"><%= prod.stock %></p>
+          </div>  
+          </div>
+        </div>
+      </div>
+            
           
-            <p><%= prod.nombre %></p>
-                  
-            <p><%= prod.precio %>$</p>
-                    
-            <p><%= prod.stock %></p>
-          
-          
-            <p><%= prod.color %></p>
-          
-          
-            <p><%= prod.anchura %></p>
             <form action="/productsadmin/<%= prod.id %>?_method=DELETE" method="post">
             <% prod.id %>
-            <button type="submit" ><i class="fa-solid fa-trash"></i></button>
+            <button type="submit" class="delete"><i class="fa-solid fa-trash"></i></button>
           </form>
       </div>
       </a>

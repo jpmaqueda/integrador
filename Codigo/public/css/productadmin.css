@@ -1,39 +1,91 @@
 .cajageneral{height: 400px;
-    background-color: white;
+    
     margin-top: 40px;
+    min-width:420px;
  
 
 }
 .cajatotallista{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 150px;
-    background-color: gray;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
     margin-top: 5px;
     border: solid gray 2px;
-    border-radius: 200px;
+    border-radius: 10px;
+    min-width: 380px;
+    margin: 5px;
+    align-items: center;
+    box-sizing: border-box;
 
 }
 .cajaimg{
-    height: auto;
-    width: 150px;
+    height: 75px;
+    min-width: 100px;
     margin: 5px;
-    margin-left: 50px;
+    margin-left: 25px;
     background-color: white;
+    
 }
 .imagenes1{
     object-fit: cover;
-    width: 150px;
-    height: 150px;
-    
+    width: 90%;
+    height: 100%;
+}
+.cajainfo{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+
     
 }
-.descripcion1{
+.delete{
+    font-size: 25px;
+    margin-right: 25px;
+    margin-left: 10px;
+    color: purple;
+}
+.campos{
+    display: block;
+    width:25%;
+    justify-content: center;
+    align-self: center;
+    
+}
+.fonts{
+    font-size: 10px;
+}
+.cloumnbox{
     display: flex;
-    width: 50%;
-    margin-left: 15%;
-    background-color: rebeccapurple;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+   justify-content: center;
+   
+}
+.autogen{
+    display: flex;
+    height: 75%;
+    width: 100%;
+    align-items: center;
 
+}
+
+.nombrecampo{
+    display: flex;
+    height: 15px;
+    width: 100%; 
+}
+.campos1{
+    display: flex;
+    font-size: 10px;
+    width: 100%;
+    justify-content: center;
+    
+}
+.divisores{
+    display: flex;
+    width:25%;
+    align-items: center;
+    justify-content: center;
 }
