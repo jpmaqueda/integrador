@@ -39,7 +39,7 @@
                         placeholder="<%= errors.nombre.msg %>"
                         
                     <% }else{ %>
-                        placeholder="nombre y apellido"
+                        placeholder="ej: Carlos Rodriguez"
                             
                     <% } %> 
                      >   
@@ -56,7 +56,7 @@
                     <% if(locals.errors && errors.email){ %>
                         placeholder="<%= errors.email.msg %>"                
                         <% }else{ %>
-                            placeholder="email"
+                            placeholder="ej: tuNombre@emial.com"
                         <% } %> 
                     > 
                 </div>
@@ -75,15 +75,14 @@
                     >
                 </div>
                 <div class="separacion">
-                    <label for="contrasena2">Ingrese nuevamente la contraseña</label>
+                    <label for="contrasena2">Confirme la contraseña</label>
                     <input 
                     type="password" 
                     id="contrasena2" 
                     name="contrasena2"
-                    class="<%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                    class="<%= locals.errors && errors.contrasena2 ? 'is-invalid' : null %>"
                     <% if(locals.errors && errors.contrasena2){ %>
-                        placeholder="<%= errors.contrasena2.msg %>"
-                        
+                        placeholder="<%= errors.contrasena2.msg %>"      
                     <% } %>
                     >
                 </div>

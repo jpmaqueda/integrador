@@ -83,10 +83,20 @@ const usersControllers={
             id: cuentas.length > 0 ? cuentas[cuentas.length -1].id + 1 : 1,
             nombre: req.body.nombre,
             email: req.body.email,
-            contrasena: bcryptjs.hashSync(req.body.contrasena,10),
-            contrasena2: req.body.contrasena2
+            contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
+            contrasena2: bcryptjs.hashSync(req.body.contrasena2, 10)
         }
-        let userCreated =user.create(cuenta)
+        const contrasena = req.body.contrasena;
+        const contrasena2 = req.body.contrasena2;
+        if(contrasena2 != contrasena){
+            return res.render("register",{
+                errors:{
+                    contrasena2:{
+                        msg:"Las contraseñas no son iguales"
+                    }
+                }})
+        }
+        user.create(cuenta)
         return res.redirect("/login");
     },
     profile:(req,res)=>{

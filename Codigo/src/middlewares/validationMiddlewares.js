@@ -17,6 +17,9 @@ const validation=[
         return true;
       }),
     
-    body('contrasena2').notEmpty().withMessage('Las contraseñas no son iguales.'), 
+    body('contrasena2').notEmpty().withMessage('Ingrese la contraseña nuevamente.')
+    
+      
+     
 ];
 module.exports=validation

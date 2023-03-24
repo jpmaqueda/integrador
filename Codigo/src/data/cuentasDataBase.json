@@ -1,10 +1,16 @@
 [
-  
   {
     "id": 1,
     "nombre": "Gianfranco Sacchi",
     "email": "gianfrancosacchi@hotmail.com.ar",
     "contrasena": "$2a$10$HkbvcQTdHF9Zu2eBcDT/NuT.CRLUzTLAUEQPxiMc2C9pTMAz/mrui",
     "contrasena2": "todavia no funciona"
+  },
+  {
+    "id": 2,
+    "nombre": "Anabella",
+    "email": "anabella.mendoza@gmail.com",
+    "contrasena": "$2a$10$mIBZ.ecnuxiYuHi10u19Oe8rI7lwPt.qXPoTiQku43bafJ63tO3tu",
+    "contrasena2": "$2a$10$oER80NV8kadfgwDMKBmcH.8wgyYmpbHAhGZXWunLUi34b4rq1Oa56"
   }
 ]
