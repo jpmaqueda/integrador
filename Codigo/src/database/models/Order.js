@@ -2,7 +2,7 @@ module.exports=(sequelize,dataTypes)=>{
     let alias="Order";
     let cols={
         id:{
-            date:dataTypes.INTEGER,
+            type:dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false
@@ -10,8 +10,7 @@ module.exports=(sequelize,dataTypes)=>{
         user_id:dataTypes.INTEGER,
         total:dataTypes.DECIMAL,
         estado:dataTypes.STRING,
-        created_at: dataTypes.TIMESTAMP,
-        updated_at: dataTypes.TIMESTAMP,
+        
 
     }
     let config={
@@ -20,12 +19,12 @@ module.exports=(sequelize,dataTypes)=>{
         updatedAt: 'updated_at',
         underscored:true
     }
-    const User= sequelize.define(alias,cols,config);
-    User.associate=function(models){
-        User.hasMany(models.Order,{
+    const Order= sequelize.define(alias,cols,config);
+    Order.associate=function(models){
+        Order.belongsTo(models.User,{
             as:"orders",
-            foreignyKey:"user_id"
+            foreignKey:"user_id"
         })
     }
-    return User;
+    return Order;
 }

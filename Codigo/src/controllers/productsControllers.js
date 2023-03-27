@@ -1,9 +1,10 @@
-const fs = require('fs')
+const db =require("../database/models");
+const product=db.Product;
+/* const fs = require('fs')
 const path = require(`path`)
 const filepath = path.join(__dirname, "../data/productsDataBase.json")
 
 const productslectura = JSON.parse(fs.readFileSync(filepath, `utf-8`))
-
 const pcControllers={
     create:(req,res)=> res.render('productcreation'),
     detail:(req,res)=> {
@@ -93,4 +94,27 @@ function eliminarProducto(id) {
 
 	fs.writeFileSync(filepath, JSON.stringify(products, null, 2));
 }
-module.exports=pcControllers
+module.exports=pcControllers */
+module.exports={
+    detail:async(req,res)=>{
+        let producto= await product.findByPk(req.params.id,
+        {
+            include:["material","category"],
+        })
+        /* return res.json({producto}) */
+        return res.render("productDetail",{product:producto})
+    },
+    create:async(req,res)=>{
+        let producto= await product.create({
+            ...req.body,
+            img:req.file?.filename ? req.file.filename:"default image"
+        })
+        return res.redirect("/")
+    },
+    store:async()=>{},
+    edit:async()=>{},
+    update:async()=>{},
+    cart:async()=>{},
+    productadmin:async()=>{},
+    delete:async()=>{},
+}

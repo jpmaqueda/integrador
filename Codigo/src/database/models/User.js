@@ -2,7 +2,7 @@ module.exports=(sequelize,dataTypes)=>{
     let alias="User";
     let cols={
         id:{
-            date:dataTypes.INTEGER,
+            type:dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false
@@ -11,8 +11,7 @@ module.exports=(sequelize,dataTypes)=>{
         email:dataTypes.STRING,
         contrasena:dataTypes.STRING,
         rol:dataTypes.INTEGER,
-        created_at: dataTypes.TIMESTAMP,
-        updated_at: dataTypes.TIMESTAMP,
+        
 
     }
     let config={
@@ -25,7 +24,7 @@ module.exports=(sequelize,dataTypes)=>{
     User.associate=function(models){
         User.hasMany(models.Order,{
             as:"order",
-            foreignyKey:"user_id"
+            foreignKey:"user_id"
         })
     }
     return User;

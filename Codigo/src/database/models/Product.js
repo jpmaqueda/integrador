@@ -2,7 +2,7 @@ module.exports=(sequelize,dataTypes)=>{
     let alias="Product";
     let cols={
         id:{
-            date:dataTypes.INTEGER,
+            type:dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false
@@ -16,25 +16,25 @@ module.exports=(sequelize,dataTypes)=>{
         ancho:dataTypes.FLOAT,
         largo:dataTypes.FLOAT,
         alto:dataTypes.FLOAT,
-        created_at: dataTypes.TIMESTAMP,
-        updated_at: dataTypes.TIMESTAMP,
+        createdAt:dataTypes.DATE,
+        updatedAt:dataTypes.DATE
         
     }
     let config={
         timestamps:true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        underscored:true
+        
+        
+        
     }
     const Product= sequelize.define(alias,cols,config);
     Product.associate=function(models){
         Product.belongsTo(models.Category,{
             as:"category",
-            foreignyKey:"category_id"
+            foreignKey:"categoryId"
         }),
         Product.belongsTo(models.Material,{
             as:"material",
-            foreignyKey:"material_id"
+            foreignKey:"materialId"
         })
     }
     return Product;

@@ -20,7 +20,7 @@
     <section class="top-section">
 
              <div class="cajas-top-section1">   
-                <img class="img-carrusel" src="/imagenes/productos/<%= product.img  %> " alt="Imagen Producto Seleccionado">
+                <img class="img-carrusel" src="/imagenes/productos/<%= product.imagen  %> " alt="Imagen Producto Seleccionado">
             </div>    
     
             <div class="cajas-top-section2">
@@ -32,18 +32,18 @@
                         <p> Color Estructura </p>           
                         <select name="color" id="color">
                             <option value="r"><%= product.color  %></option>
-                            <option value="a"><%= product.color2  %></option>
-                            <option value="v"><%= product.color3  %></option>
+                            <!-- <option value="a"><%= //product.color2  %></option>
+                            <option value="v"><%= //product.color3  %></option> -->
                         </select>
                     </div>
 
                     <div class="div-desplegables">
                         <p> Madera </p>
                         <select name="color" id="color">
-                            <option value="r">Guayubira</option>
-                            <option value="a">Pino</option>
+                            <option value="r"><%= product.material.nombre %></option>
+                            <!-- <option value="a">Pino</option>
                             <option value="v">Eucalipto</option>
-                            <option value="v">Paraiso</option>
+                            <option value="v">Paraiso</option> -->
                         </select>
                     </div>
 
