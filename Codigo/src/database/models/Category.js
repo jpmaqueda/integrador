@@ -8,14 +8,15 @@ module.exports=(sequelize,dataTypes)=>{
             allowNull:false
         },
         nombre:dataTypes.STRING,
-        
+        createdAt:dataTypes.DATE,
+        updatedAt:dataTypes.DATE
         
         
     }
     let config={
         timestamps:true,
         
-        underscored:true 
+        /* underscored:true  */
     }
     const Category= sequelize.define(alias,cols,config);
     Category.associate=function(models){

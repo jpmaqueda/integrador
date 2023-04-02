@@ -1,6 +1,9 @@
 const db =require("../database/models");
 const product=db.Product;
-/* const fs = require('fs')
+const material=db.Material;
+const categoria=db.Category;
+/*
+const fs = require('fs')
 const path = require(`path`)
 const filepath = path.join(__dirname, "../data/productsDataBase.json")
 
@@ -104,17 +107,61 @@ module.exports={
         /* return res.json({producto}) */
         return res.render("productDetail",{product:producto})
     },
+    store:async(req,res)=>{
+        let materiales=await material.findAll();
+        let categorias=await categoria.findAll();
+        
+        
+        //return res.json( {materiales,categorias})
+        res.render("productcreation",{categorias, materiales})
+    },
     create:async(req,res)=>{
-        let producto= await product.create({
-            ...req.body,
-            img:req.file?.filename ? req.file.filename:"default image"
+        await product.create({
+            nombre:req.body.nombre,
+            precio:req.body.precio,
+            stock:req.body.stock,
+            color:req.body.color,
+            alto:req.body.alto,
+            largo:req.body.largo,
+            ancho:req.body.ancho,
+            categoryId:req.body.categoryId,
+            materialId:req.body.materialId,
+            imagen:req.file?.filename ? req.file.filename:"default image"
         })
         return res.redirect("/")
     },
-    store:async()=>{},
-    edit:async()=>{},
-    update:async()=>{},
-    cart:async()=>{},
-    productadmin:async()=>{},
-    delete:async()=>{},
+    edit:async(req,res)=>{
+        let categorias=await categoria.findAll()
+        let materiales=await material.findAll()
+        let producto= await product.findByPk(req.params.id,{
+            include:["material","category"],
+            
+        })
+       /*  return res.json({producto}) */
+        return res.render("productedit",{product:producto,categorias,materiales})
+    },
+    update:async(req,res)=>{
+        let id =req.params.id;
+        await product.update({
+            ...req.body,
+            imagen:req.file?.filename ? req.file.filename : product.imagen
+        },{
+            where:{id:id}
+        })
+        return res.redirect("/")
+    },
+    cart:async(req,res)=>{
+        res.render("shoppingCart")
+    },
+    /* cartAdd:async(req,res)=>{}, */
+    productadmin:async(req,res)=>{
+        let productos=await product.findAll();
+        /* return res.json({productos}) */
+        return res.render("productsadmin",{productslectura:productos})
+    },
+    delete:async(req,res)=>{
+        let id =req.params.id;
+        await product.destroy({where:{id:id}});
+        return res.redirect("/productsadmin")
+    },
 }

@@ -80,7 +80,7 @@
       <nav class="cajaGeneral">
         <form class="form" action="/productedit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
           <div class="cajaDeImagen">
-            <img class="imagen" src="/imagenes/productos/<%= product.img%>">
+            <img class="imagen" src="/imagenes/productos/<%= product.imagen%>">
             <div class="cambiaimg">
               <div class="inputextoimg">
                 <label for="files" class="label">Seleciona una imagen</label>
@@ -95,10 +95,29 @@
         <input type="number" class="inputexto" name="precio"placeholder="precio" value="<%= product.precio %>">
         <input type="number" class="inputexto" name="stock"placeholder="stock" value="<%= product.stock %>">
         <input type="text" class="inputexto" name="color"placeholder="color" value="<%= product.color %>">
-        <input type="text" class="inputexto" name="altura"placeholder="altura" value="<%= product.altura %>">
-        <input type="text" class="inputexto" name="profundidad"placeholder="profundidad" value="<%= product.profundidad %>">
-        <input type="text" class="inputexto"  name="anchura"placeholder="anchura" value="<%= product.anchura %>">
-        <input type="submit" class="inputexto" value="Enviar" />
+        <input type="text" class="inputexto" name="altura"placeholder="altura" value="<%= product.alto %>">
+        <input type="text" class="inputexto" name="profundidad"placeholder="profundidad" value="<%= product.largo %>">
+        <input type="text" class="inputexto"  name="anchura"placeholder="anchura" value="<%= product.ancho %>">
+        <select name="categoryId" id="">
+          <option value=""disabled >Eliga una categoria</option>
+          <option value="<%= product.category.id %>"selected><%= product.category.nombre %></option>
+          <% categorias.forEach(categoria=>{ %>
+            <% if(product.category.id!=categoria.id){ %>
+              <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+              <% } %>
+              <% }) %>
+            </select>
+            <select name="materialId" id="">
+              <option value=""disabled >Eliga un material</option>
+              <option value="<%= product.material.id %>" selected><%= product.material.nombre %></option>
+              <% materiales.forEach(material=>{ %>
+                <% if(product.material.id!=material.id){ %>
+                  <option value="<%= material.id %>"><%= material.nombre %></option>
+                  <% } %>
+                  <% }) %>
+            </select>
+            <input type="text" class="inputexto"  name="descripcion"placeholder="descripción" value="<%= product.descripcion %>">
+            <input type="submit" class="inputexto" value="Enviar" />
           </div>
         </form>
       </nav>

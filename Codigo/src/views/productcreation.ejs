@@ -274,8 +274,21 @@ function readURL(input) {
         <input type="number" class="inputexto" placeholder="Stock" name="stock"> 
         <input type="text" class="inputexto" placeholder="Color" name="color">
         <input type="text" class="inputexto" placeholder="Alto" name="alto">
-        <input type="text" class="inputexto" placeholder="Profundidad" name="largo">
+        <input type="text" class="inputexto" placeholder="Largo" name="largo">
         <input type="text" class="inputexto" placeholder="Ancho" name="ancho">
+        <select name="categoryId" id="">
+            <option value=""disabled selected>Eliga una categoria</option>
+          <% categorias.forEach(categoria=>{ %>
+            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+          <% }) %>
+        </select>
+        <select name="materialId" id="">
+            <option value=""disabled selected>Eliga un material</option>
+          <% materiales.forEach(material=>{ %>
+            <option value="<%= material.id %>"><%= material.nombre %></option>
+          <% }) %>
+        </select>
+        
         <input type="text" class="inputexto" placeholder="descripcion" name="descripcion">
         <div class="inputexto">
             <label for="files" class="foto">Seleciona una imagen</label>
