@@ -15,23 +15,61 @@
 <body>
     <%- include('partial/header')  %>
     <main>
+        
         <div class="informacion1">
-            <h2>Hola <%= user.nombre %> </h2>
-            <p>El email registrado es: <%= user.email %> </p>
-            <p class="titulo">Campos adicionales</p>
-            <form action=""method="post">
-                <div>
-                    <label for="direccion">¿Quieres agregar una dirección para tu proximas compras?</label><br>
-                    <input
-                    id="direccion"
-                    name="direccion"
-                    type="text"
-                    placeholder="Ingrese la direccion aqui">
+            <h2 class="saludo">Hola <%= user.nombre %></h2>
+            <div class="informacion">
+                <div class="campo-adicional">
+                    <p class="titulo">Datos registrados</p>
+                    <form action="/profile/<%= user.id %>?_method=PUT" method="post">
+                        <div>
+                            <label for="email">Email registrado</label><br>
+                            <input type="text" id="email" name="email" value="<%= user.email %>">
+                        </div>
+                        <div>
+                            <% if(user.numero!=null&&user.numero!=0){ %>
+                                <label for="numero">Numero registrado</label><br>
+                                <input type="number" id="numero" name="numero" value="<%= user.numero %>">
+                            <% } %>
+                        </div>
+                        <div>
+                            <% if(user.direccion!=null&&user.direccion!=""){ %>
+                                <label for="direccion">Dirección registrada</label><br>
+                                <input type="text" id="direccion" name="direccion" value="<%= user.direccion %>">
+                            <% } %>
+                        </div>
+                        <button type="submit">Actualizar información</button>
+                    </form>
                 </div>
-            </form>
-            <div>
-                <a href="/logout">Cerrar sesión</a>
+                <% if(user.direccion==null||user.direccion==""||user.numero==null||user.numero==""){ %>
+                <div class="campo-adicional">
+                    <p class="titulo">Datos adicionales</p>
+                    <form action="/profile/<%= user.id %>?_method=PUT"method="post">
+                        <div>
+                            <% if(user.direccion==null||user.direccion==""){ %>
+                                <label for="direccion">Agregar dirección</label><br>
+                                <input id="direccion" name="direccion" type="text" placeholder="Ingrese la direccion aqui">
+                            <% } %>
+                        </div>
+                        <div>
+                            <% if(user.numero==null||user.numero==""){ %>
+                                <label for="numero">Agregar numero</label><br>
+                                <input id="numero"name="numero"type="number">
+                            <% } %>
+                        </div>
+                        <button type="submit">Agregar información</button>
+                    </form>
+                </div>
+                <% } %>
             </div>
+        </div>
+        <div class="botones">
+            <form action="/profile/<%= user.id %>?_method=DELETE" method="post">
+                <button type="submit">Borrar cuenta</button>
+            </form>
+            <form action="/logout">
+                <button type="submit">Cerrar sesión</button>
+            </form>
         </div>
     </main>
     <%- include('partial/footer')  %>

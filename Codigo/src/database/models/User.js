@@ -11,14 +11,16 @@ module.exports=(sequelize,dataTypes)=>{
         email:dataTypes.STRING,
         contrasena:dataTypes.STRING,
         rol:dataTypes.INTEGER,
+        direccion:dataTypes.STRING,
+        numero:dataTypes.INTEGER,
+        createdAt:dataTypes.DATE,
+        updatedAt:dataTypes.DATE
         
 
     }
     let config={
         timestamps:true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        underscored:true
+        /* underscored:true */
     }
     const User= sequelize.define(alias,cols,config);
     User.associate=function(models){

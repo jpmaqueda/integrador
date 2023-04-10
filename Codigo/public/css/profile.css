@@ -6,14 +6,31 @@
 
 }
 .informacion1{
-    height: 500px;
+    padding: 0px 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
+    flex-wrap: wrap;
 }
 .titulo{
     font-weight: bold;
     font-size: 23px;
+    width: 100%;
+}
+.campo-adicional{
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px black;
+    width: 40%;
+}
+.saludo{
+    margin: 20px;
+    width: 100%;
+    
+}
+.botones{
+    height: 100px;
+}
+.informacion{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
