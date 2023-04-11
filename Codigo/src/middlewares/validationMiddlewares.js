@@ -1,6 +1,7 @@
 const { body }=require('express-validator')
 
 const validation=[
+    //validacion para el login
     body('nombre').notEmpty().withMessage('Escribe tu nombre y apellido.'),
 
     body('email')
@@ -17,9 +18,7 @@ const validation=[
         return true;
       }),
     
-    body('contrasena2').notEmpty().withMessage('Ingrese la contraseña nuevamente.')
-    
-      
+    body('contrasena2').notEmpty().withMessage('Ingrese la contraseña nuevamente.'),      
      
 ];
 module.exports=validation

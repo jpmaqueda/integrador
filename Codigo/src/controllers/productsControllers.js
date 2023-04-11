@@ -1,3 +1,4 @@
+const { validationResult }=require('express-validator')
 const db =require("../database/models");
 const product=db.Product;
 const material=db.Material;
@@ -116,6 +117,16 @@ module.exports={
         res.render("productcreation",{categorias, materiales})
     },
     create:async(req,res)=>{
+        let materiales=await material.findAll();
+        let categorias=await categoria.findAll();
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('productcreation', {
+                categorias,materiales,
+                errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
         await product.create({
             nombre:req.body.nombre,
             precio:req.body.precio,

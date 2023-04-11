@@ -270,6 +270,13 @@ function readURL(input) {
             <form class="contentbox" action="/store" method="post" enctype="multipart/form-data">
                 <p class="titulo">Configura tu producto</p>
         <input type="text" class="inputexto" placeholder="Nombre del producto" name="nombre">
+        <% if(locals.errors && locals.errors.nombre){ 
+          console.log(locals.errors)%>
+          
+          <div>
+            <p><%= errors.nombre.msg %></p>
+          </div>
+        <% } %>
         <input type="number" class="inputexto" placeholder="Precio" name="precio">
         <input type="number" class="inputexto" placeholder="Stock" name="stock"> 
         <input type="text" class="inputexto" placeholder="Color" name="color">
