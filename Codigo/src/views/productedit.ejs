@@ -84,7 +84,7 @@
             <div class="cambiaimg">
               <div class="inputextoimg">
                 <label for="files" class="label">Seleciona una imagen</label>
-            <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files" name="img">
+            <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files" name="imagen">
             </div>
             </div>
           </div>
@@ -92,14 +92,18 @@
           <div class="camposform">
             <p class="titulo">Configura tu producto</p>
         <input type="text" class="inputexto" name="nombre" placeholder="nombre" value="<%= product.nombre %>">
-        
+        <% if(locals.errors && locals.errors.nombre){%>
+          <span>
+            <%= errors.nombre.msg %>
+          </span>
+        <% } %>
         <input type="number" class="inputexto" name="precio"placeholder="precio" value="<%= product.precio %>">
         <input type="number" class="inputexto" name="stock"placeholder="stock" value="<%= product.stock %>">
         <input type="text" class="inputexto" name="color"placeholder="color" value="<%= product.color %>">
         <input type="text" class="inputexto" name="altura"placeholder="altura" value="<%= product.alto %>">
         <input type="text" class="inputexto" name="profundidad"placeholder="profundidad" value="<%= product.largo %>">
         <input type="text" class="inputexto"  name="anchura"placeholder="anchura" value="<%= product.ancho %>">
-        <select name="categoryId" id="">
+        <select class="inputexto" name="categoryId" id="">
           <option value=""disabled >Eliga una categoria</option>
           <option value="<%= product.category.id %>"selected><%= product.category.nombre %></option>
           <% categorias.forEach(categoria=>{ %>
@@ -108,7 +112,7 @@
               <% } %>
               <% }) %>
             </select>
-            <select name="materialId" id="">
+            <select class="inputexto" name="materialId" id="">
               <option value=""disabled >Eliga un material</option>
               <option value="<%= product.material.id %>" selected><%= product.material.nombre %></option>
               <% materiales.forEach(material=>{ %>

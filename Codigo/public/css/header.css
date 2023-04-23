@@ -1,11 +1,14 @@
 .main-header {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    min-width: 420px;
-    background-color: #7d3535;
-    height: auto;
-    flex-direction: column;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  min-width: 420px;
+  background-color: #7d3535;
+  height: auto;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 100;
     
   }
   .options {

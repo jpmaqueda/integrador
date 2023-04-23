@@ -25,66 +25,83 @@
             <h2>Creá tu cuenta</h2>
             <form action="/register" method="post" >
                 <div class="separacion">
-                    <label for="nombre">Ingrese nombre y apellido</label>
-                    <input 
-                    type="text"
-                    id="nombre" 
-                    name="nombre"
-                    class="<%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
-                    value="<%= locals.oldData ? oldData.nombre : null %>"
-                    
-                    
-                    <% if(locals.errors && errors.nombre){ %>
+                    <div class="form-control <%= locals.errors && errors.nombre ? 'error' : null %>" id="control-nombre">
+                        <label for="nombre">Ingrese nombre y apellido</label>
+                        <input
+                        onblur=""
+                        type="text"
+                        id="nombre" 
+                        name="nombre"
+                        class=""
+                        value="<%= locals.oldData ? oldData.nombre : null %>"
                         
-                        placeholder="<%= errors.nombre.msg %>"
                         
-                    <% }else{ %>
-                        placeholder="ej: Carlos Rodriguez"
+                        <% if(locals.errors && errors.nombre){ %>
                             
-                    <% } %> 
-                     >   
+                            placeholder="<%= errors.nombre.msg %>"
+                            
+                        <% }else{ %>
+                            placeholder="ej: Carlos Rodriguez"
+                                
+                        <% } %> 
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="separacion">
-                        <label for="numero-email">Ingrese correo electrónico</label>
-                    <input 
-                    type="text" 
-                    id="numero-email" 
-                    name="email"
-                    class="<%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                    value="<%= locals.oldData ? oldData.email : null %>"
-                    
-                    <% if(locals.errors && errors.email){ %>
-                        placeholder="<%= errors.email.msg %>"                
+                </div>
+                <div class="separacion">
+                    <div class="form-control <%= locals.errors && errors.email ? 'error' : null %>" id="control-email">
+                        <label for="email">Ingrese correo electrónico</label>
+                        <input 
+                        type="text" 
+                        id="email" 
+                        name="email"
+                        class=""
+                        value="<%= locals.oldData ? oldData.email : null %>"
+                        
+                        <% if(locals.errors && errors.email){ %>
+                            placeholder="<%= errors.email.msg %>"                
                         <% }else{ %>
                             placeholder="ej: tuNombre@emial.com"
                         <% } %> 
-                    > 
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
                 </div>
                 <div class="separacion">
-                    <label for="contrasena">Ingrese contraseña</label>
-                    <input 
-                    type="password" 
-                    id="contrasena" 
-                    name="contrasena"
-                    class="<%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
-                    <% if(locals.errors && errors.contrasena){ %>
-                        placeholder="<%= errors.contrasena.msg %>"
-                    <% }else{ %>
-                        placeholder="Minimo 8 caracteres y una mayúscula"        
-                    <% } %> 
-                    >
+                    <div class="form-control <%= locals.errors && errors.contrasena ? 'error' : null %>" id="control-contrasena">
+                        <label for="contrasena">Ingrese contraseña</label>
+                        <input 
+                        type="password" 
+                        id="contrasena" 
+                        name="contrasena"
+                        class=""
+                        <% if(locals.errors && errors.contrasena){ %>
+                            placeholder="<%= errors.contrasena.msg %>"
+                        <% }else{ %>
+                            placeholder="Minimo 8 caracteres y una mayúscula"        
+                        <% } %> 
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
                 </div>
                 <div class="separacion">
-                    <label for="contrasena2">Confirme la contraseña</label>
-                    <input 
-                    type="password" 
-                    id="contrasena2" 
-                    name="contrasena2"
-                    class="<%= locals.errors && errors.contrasena2 ? 'is-invalid' : null %>"
-                    <% if(locals.errors && errors.contrasena2){ %>
-                        placeholder="<%= errors.contrasena2.msg %>"      
-                    <% } %>
-                    >
+                    <div class="form-control <%= locals.errors && errors.contrasena2 ? 'error' : null %>"id="control-contrasena2">
+                        <label for="contrasena2">Confirme la contraseña</label>
+                        <input 
+                        type="password" 
+                        id="contrasena2" 
+                        name="contrasena2"
+                        class=""
+                        <% if(locals.errors && errors.contrasena2){ %>
+                            placeholder="<%= errors.contrasena2.msg %>"      
+                        <% } %>
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
                 </div>
                 <div class="crear">
                     <input type="submit" value="Crear">
@@ -102,6 +119,7 @@
             
         </div>
     </main>
+    <%- include('partial/footer') %>
 </body>
-<%- include('partial/footer') %>
+<script src="js/validator.js"></script>
 </html>

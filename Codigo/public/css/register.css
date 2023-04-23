@@ -37,6 +37,7 @@ main{
 }
 .conteiner label{
     font-weight: 450;
+    cursor: pointer;
 }
 .conteiner input{
     border-radius: 10px;
@@ -54,13 +55,8 @@ main{
     background-color: #EB984E;
     transition: all 500ms;
 }
-.is-invalid::placeholder{
-    color:red;
 
-}
-.conteiner input.is-invalid{
-    box-shadow: 0px 0px 10px rgb(216, 8, 8);
-}
+
 .text-danger{
     color: red;
     font-size: 15px;
@@ -127,6 +123,9 @@ p.condiciones{
 main input:focus{
     outline:none;
 }
+main input:hover{
+    box-shadow: 0px 0px 10px orange
+}
 
 .crear input:hover{
     cursor:pointer;
@@ -134,6 +133,36 @@ main input:focus{
 }
 .caja-desktop{
     display:none;
+}
+.form-control{
+    position: relative;
+}
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+.form-control.success input{
+    box-shadow: 0px 0px 10px rgb(86, 224, 82);
+}
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+.form-control.error label{
+    color:  rgb(216, 8, 8);
+}
+.form-control.error input{
+    box-shadow: 0px 0px 10px rgb(216, 8, 8);
+}
+.form-control.error i.fa-exclamation-circle {
+	color: rgb(216, 8, 8);
+	visibility: visible;
+}
+.form-control.error input::placeholder{
+    color:red;
+
 }
 @media(min-width:768px){
     .conteiner{

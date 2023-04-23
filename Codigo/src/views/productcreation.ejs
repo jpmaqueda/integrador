@@ -267,40 +267,69 @@ function readURL(input) {
       </div>
       <div class="Div2" id="Div2">
         <div class="mainbox">
-            <form class="contentbox" action="/store" method="post" enctype="multipart/form-data">
+            <form class="contentbox" action="/productcreation" method="post" enctype="multipart/form-data">
                 <p class="titulo">Configura tu producto</p>
-        <input type="text" class="inputexto" placeholder="Nombre del producto" name="nombre">
-        <% if(locals.errors && locals.errors.nombre){ 
-          console.log(locals.errors)%>
-          
-          <div>
-            <p><%= errors.nombre.msg %></p>
-          </div>
+        <input type="text" class="inputexto" placeholder="Nombre del producto"
+        value="<%= locals.oldData ? oldData.nombre : null %>"
+        name="nombre">
+        <% if(locals.errors && locals.errors.nombre){%>
+          <span>
+            <%= errors.nombre.msg %>
+          </span>
         <% } %>
-        <input type="number" class="inputexto" placeholder="Precio" name="precio">
-        <input type="number" class="inputexto" placeholder="Stock" name="stock"> 
-        <input type="text" class="inputexto" placeholder="Color" name="color">
-        <input type="text" class="inputexto" placeholder="Alto" name="alto">
-        <input type="text" class="inputexto" placeholder="Largo" name="largo">
-        <input type="text" class="inputexto" placeholder="Ancho" name="ancho">
-        <select name="categoryId" id="">
+        <input type="number" class="inputexto" placeholder="Precio"
+        value="<%= locals.oldData ? oldData.precio : null %>"
+        name="precio">
+        <% if(locals.errors && locals.errors.precio){%>
+          <span>
+            <%= errors.precio.msg %>
+          </span>
+        <% } %>
+        <input type="number" class="inputexto" placeholder="Stock"
+        value="<%= locals.oldData ? oldData.stock : null %>" name="stock"> 
+        <input type="text" class="inputexto" placeholder="Color"
+        value="<%= locals.oldData ? oldData.color : null %>" name="color">
+        <input type="text" class="inputexto" placeholder="Alto"
+        value="<%= locals.oldData ? oldData.alto : null %>" name="alto">
+        <input type="text" class="inputexto" placeholder="Largo"
+        value="<%= locals.oldData ? oldData.largo : null %>" name="largo">
+        <input type="text" class="inputexto" placeholder="Ancho"
+        value="<%= locals.oldData ? oldData.ancho : null %>" name="ancho">
+        <select class="inputexto" name="categoryId" id="">
             <option value=""disabled selected>Eliga una categoria</option>
           <% categorias.forEach(categoria=>{ %>
             <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
           <% }) %>
         </select>
-        <select name="materialId" id="">
+        <% if(locals.errors && locals.errors.categoryId){%>
+          <span>
+            <%= errors.categoryId.msg %>
+          </span>
+        <% } %>
+        <select class="inputexto" name="materialId" id="">
             <option value=""disabled selected>Eliga un material</option>
+
           <% materiales.forEach(material=>{ %>
             <option value="<%= material.id %>"><%= material.nombre %></option>
           <% }) %>
         </select>
+        <% if(locals.errors && locals.errors.materialId){%>
+          <span>
+            <%= errors.materialId.msg %>
+          </span>
+        <% } %>
         
-        <input type="text" class="inputexto" placeholder="descripcion" name="descripcion">
+        <input type="text" class="inputexto" placeholder="descripcion"
+        value="<%= locals.oldData ? oldData.descripcion : null %>" name="descripcion">
+        <% if(locals.errors && locals.errors.descripcion){%>
+          <span>
+            <%= errors.descripcion.msg %>
+          </span>
+        <% } %>
         <div class="inputexto">
             <label for="files" class="foto">Seleciona una imagen</label>
-        <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files" name="imagen">
-        </div>
+            <input type="file" onchange="readURL(this);" accept="image/png, image/jpeg" style="visibility:hidden;" id="files" name="imagen">
+          </div>
 <div class="noimg">
     <img  class="cajaimg" id="blah" src="#" />
 </div>
