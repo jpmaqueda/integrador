@@ -10,7 +10,8 @@ const expresiones = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}\s[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
     password: /^(?=.*[A-Z])(?=.{8,})[a-zA-Z0-9!"#$%&/()=?¡¿]*$/, // 8 a 0 digitos.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    correo: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+    /*  ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$*/
     telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 const campos={
@@ -71,9 +72,8 @@ inputs.forEach((input)=>{
 })
 
 form.addEventListener('submit',function(e){
-    e.preventDefault()
-    if(campos.nombre && campos.email && campos.contrasena && campos.contrasena2){
-        form.submit()
+    if(!(campos.nombre && campos.email && campos.contrasena && campos.contrasena2)){
+        e.preventDefault() 
     }
 })
     

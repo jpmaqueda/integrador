@@ -15,41 +15,54 @@
 </head>
 <body>
     <%- include('partial/header') %>
-    <main class="login">
+    <main class="login-conteiner">
         <div class="main">
             <div class="info">
                <form action="/login" method="POST">
                     <h1 class="titulo-celu">Bienvenidos</h1>
-                    
-                    
                     <h1 class="titulo-desktop">Iniciar sesión</h1>
-                    <input 
-                    class="texto <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                    type="text" 
-                    id="usuario" 
-                    name="email" 
-                    <% if (locals.errors && errors.email) { %>
-                        placeholder="<%= errors.email.msg %>"
-                    <% } else { %>
-                        placeholder="Dirección de correo electrónico"
-                    <% } %>
-                    >
-                    <input 
-                    class="texto <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
-                    type="password" 
-                    id="password" 
-                    name="contrasena" 
-                    
-                    <% if (locals.errors && errors.contrasena) { %>
-                        placeholder="<%= errors.contrasena.msg %>"
-                    <% } else { %>
-                        placeholder="Contraseña"
-                    <% } %>
-                    >
+                    <div class="form-control">
+                        <input 
+                        class="texto <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        oninput="handleChange(event)"
+                        type="text" 
+                        id="usuario" 
+                        name="email" 
+                        
+                        >
+                        <label class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" for="usuario">
+                            <% if (locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                            <% }else{ %>
+                                Correo electrónico
+                            <% } %>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input 
+                        class="texto <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" 
+                        oninput="handleChange2(event)"
+                        type="password" 
+                        id="password" 
+                        name="contrasena" 
+                        
+                        
+                        >
+                        <label class="<%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" for="password">
+                            <% if (locals.errors && errors.contrasena) { %>
+                                <%= errors.contrasena.msg %>
+                            <% }else{ %>
+                                Contraseña
+                            <% } %>
+                        </label>
+                    </div>
                     <div class="botonCheck">
                         <input type="checkbox" class="form-check-input" name="remember_user"><p> Recordar mi usuario</p>
                     </div>
-                    <input class="ingresar" type="submit" value="Ingresar">
+                    <div>
+                        <input class="ingresar" type="submit" value="Ingresar">
+                        <span class="input-vacios">Complete con sus datos para ingresar</span>
+                    </div>
                     <p><a class="olvidaste" href="https://viva-mundo.com/es/noticia/post/los-10-mejores-trucos-para-mejorar-tu-memoria-y-recordar-cualquier-cosa">¿Olvidate tu contraseña?</a></p>
                     <a href="" class="google-celu"><img class="img" src="https://app.nudgify.com/images/google-logo.png" alt=""></i>Ingresar</a>
                 </form>
@@ -86,6 +99,6 @@
     </main>
     <%- include('partial/footer') %>
     
-    <script src="js/validator"></script>
+    <script src="js/validatorLogin.js"></script>
 </body>
 </html>

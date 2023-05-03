@@ -4,8 +4,8 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     
+    
 }
-
 
 :not(.main-header,.logo, p, a, header input,header div,header li){
     box-sizing: border-box; 
@@ -18,17 +18,21 @@
     position: relative;
     justify-content:center;
     margin:  30px;
+    height: 450px;
     
 }
 
+.main a{
+    color:black;
+}
 
 .info{
     box-sizing: border-box;
-    height: 400px;
+    height: 420px;
     z-index: 10;
     width: 500px;
     background-color: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 0px 40px rgb(100, 100, 100);
     border-right: black 6px solid;
@@ -45,8 +49,8 @@
    transition: 500ms all;
    width: 80%;
 }
-.info h1{
-    font-size: 50px;
+.info h1.titulo-desktop{
+    font-size: 45px;
     position: relative;
     left: 18px;
     margin: 20px 0 0;
@@ -78,7 +82,7 @@
     text-align: center;
     align-items:center;
     justify-content: space-evenly;
-    height: 400px;
+    height: 420px;
     width: 400px;
     flex-direction: column;
     padding: 20px;
@@ -182,9 +186,7 @@ main input{
     margin: 15px;
     padding: 10px;
 }
-input#password.texto{
-    margin-bottom: 2px;
-}
+
 .todavia{
     position: relative;
     
@@ -211,6 +213,13 @@ input#password.texto{
     box-shadow: 0px 0px 10px black;
     cursor: pointer;
 }
+span.input-vacios{
+    position: relative;
+    margin: 15px;
+    font-size: 15px;
+    visibility: hidden;
+    color:rgb(216, 8, 8)
+}
 .olvidaste{
     font-size: 12px;
     transition: 500ms;
@@ -236,32 +245,54 @@ input#password.texto{
     
     box-shadow: 0px 0px 10px rgb(251, 128, 5);
 }
-.is-invalid::placeholder{
-    color:red;
-
-}
 input.is-invalid{
-    box-shadow: 0px 0px 10px rgb(216, 8, 8);
+    border:solid 2px rgb(216, 8, 8);
+    
+}
+input.is-invalid:focus{
+    box-shadow: none;
+    
 }
 .text-danger{
     color: red;
     font-size: 15px;
     margin: 0px 0px 0px 10px
 }
-/* i{
-    color: black;
-    font-weight: 30px;
+.form-control{
     position: relative;
-    left: -20px;
-    
-} */
+}
+.form-control :is(label){
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    pointer-events: none;
+    color: #888888;
+    transition: 0.3s;
+}
+.form-control > label {
+    left: 17px;
+    translate: 0 -50%;
+    padding: 2px 2px;
+}
+.form-control > :is(input:focus, .has-value) ~ label {
+    background: white;
+    border-radius: 20%;
+    color: rgba(0, 0, 0, 0.685);
+    translate: 7px -32px;
+}
+.form-control label.is-invalid{
+    color:red;
+
+}
 @media (max-width:768px){
     .main{
+        height: 500px;
         display: flex;
         flex-wrap: wrap;
     }
     .info{
-        width: 90%;
+        width: 100%;
         box-shadow: inset 10px 10px 44px -33px rgba(0,0,0,0.75);
         border: 1px solid black;
         border-radius: 10px 10px 0 0;
@@ -294,13 +325,16 @@ input.is-invalid{
         display: none;
     }
     .info h1{
-        font-size: 35px;
+        position: relative;
+        left: 15px;
+        margin: 20px 0 0;
+        font-size: 30px;
     }
     .formulario{
         display: none;  
     }
     .formulario2{
-        width: 90%;
+        width: 100%;
         
         background-color: white;
         display: block;
@@ -325,12 +359,17 @@ input.is-invalid{
         border: none;
         background-color: transparent;
     }
+    span.input-vacios{
+        font-size: 12px;        
+    }
     
 }
-@media (max-width:480px){
-    .info, .formulario2 {
+@media (max-width:380px){
+    
+    div.info, .formulario2 {
         width: 100%;
         padding: 20px;
+        
     }
     main form{
         width: 100%;
@@ -347,8 +386,8 @@ input.is-invalid{
         padding:15px 0px 15px 15px ;
         font-size: 15px;
     }
-    h1.titulo-celu{
-        font-size: 25px;
+    div.info h1.titulo-celu{
+        font-size: 10px;
     }
     input.form-check-input{
         margin: 0px 5px 0px 20px;

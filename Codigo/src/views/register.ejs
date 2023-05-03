@@ -51,19 +51,21 @@
                 </div>
                 <div class="separacion">
                     <div class="form-control <%= locals.errors && errors.email ? 'error' : null %>" id="control-email">
-                        <label for="email">Ingrese correo electrónico</label>
+                        <label for="email">
+                            <% if(locals.errors && errors.email){ %>
+                                <%= errors.email.msg %>                
+                            <% }else{ %>
+                                Ingrese correo electrónico
+                            <% } %>
+                            
+                        </label>
                         <input 
                         type="text" 
                         id="email" 
                         name="email"
                         class=""
                         value="<%= locals.oldData ? oldData.email : null %>"
-                        
-                        <% if(locals.errors && errors.email){ %>
-                            placeholder="<%= errors.email.msg %>"                
-                        <% }else{ %>
-                            placeholder="ej: tuNombre@emial.com"
-                        <% } %> 
+                        placeholder="ej: tuNombre@emial.com"                         
                         >
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
@@ -121,5 +123,5 @@
     </main>
     <%- include('partial/footer') %>
 </body>
-<script src="js/validator.js"></script>
+<script src="js/validatorRegister.js"></script>
 </html>

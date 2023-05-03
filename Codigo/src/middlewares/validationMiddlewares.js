@@ -5,8 +5,8 @@ const validation=[
     body('nombre').notEmpty().withMessage('Escribe tu nombre y apellido.'),
 
     body('email')
-    .notEmpty().withMessage('Ingresa un Email.').bail()
-    .isEmail().withMessage('ingresa un Email válido.'),
+    .notEmpty().withMessage('Ingresa un Email').bail()
+    .isEmail().withMessage('ingresa un Email válido'),
 
     body('contrasena')
     .notEmpty().withMessage('Al menos 8 caracteres y una mayúscula.').bail()

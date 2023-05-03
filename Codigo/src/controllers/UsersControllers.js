@@ -128,20 +128,20 @@ module.exports={
 				oldData: req.body
 			});
 		}
-
         let encontrarUser= await usuarios.findAll();
-        encontrarUser.forEach(user => {
-            if(user.email==req.body.email){
-                return res.render('register',{
-                    errors:{
-                        email:{
-                            msg:'El email "'+ req.body.email+'" ya esta registrado'
-                        }
-                    },
-                    oldData:req.body
-                })
-            }
-        });
+        let user = encontrarUser.find(user =>{return user.email===req.body.email})
+        /* return res.json({user}) */
+        if(user){
+            return res.render('register',{
+                errors:{
+                    email:{
+                        msg:'El email "'+ req.body.email+'" ya esta registrado'
+                    }
+                },
+                oldData:req.body
+            })
+        }
+        
         const contrasena = req.body.contrasena;
         const contrasena2 = req.body.contrasena2;
         if(contrasena2 != contrasena){
@@ -210,7 +210,7 @@ module.exports={
             return res.render('login',{
                 errors:{
                     email:{
-                        msg:'Dirección de correo electrónico inválida'
+                        msg:'Correo electrónico inválido'
                     }
                 }
             })

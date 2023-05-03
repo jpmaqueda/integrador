@@ -4,7 +4,7 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
-:not(.main-header,header p,header a, header input,header div,header li){
+:not(.main-header,header *,header a, header input,header div,header li){
     box-sizing: border-box;
     
 }
