@@ -193,7 +193,7 @@ module.exports={
                 delete usuario.contrasena2
                 req.session.userLogged=usuario;
 
-                if(req.body.remember_users){
+                if(req.body.remember_user){
                     res.cookie('userEmail', req.body.email, { maxAge:90000000, httpOnly: true });
                 }
                 return res.redirect('/')

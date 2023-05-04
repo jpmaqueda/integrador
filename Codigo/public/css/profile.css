@@ -6,7 +6,7 @@
 
 }
 .informacion1{
-    padding: 0px 60px;
+    padding: 0px 50px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -15,11 +15,33 @@
     font-size: 23px;
     width: 100%;
 }
-.campo-adicional{
+.datos{
     display: flex;
     flex-wrap: wrap;
     border: solid 2px black;
-    width: 40%;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    margin: 20px;
+}
+
+.boton{
+    position: absolute;
+    left: 40%;
+    top: 93%;
+    
+    
+}
+.boton button{
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 180px;
+    
+    
+}
+.datos div{
+    padding: 20px;
 }
 .saludo{
     margin: 20px;
@@ -31,6 +53,8 @@
 }
 .informacion{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
     width: 100%;
 }

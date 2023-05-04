@@ -3,17 +3,6 @@ const span = document.querySelector("span.input-vacios")
 const input1 = document.querySelector(".form-control input")
 const input2 = document.querySelector(".form-control input#password")
 
-const validarFormulario=(e)=>{
-    switch(e.target.name){
-        case "email":
-            e.target.email!=="" ? campos[email]=true : campos[email]=false       
-            break;
-            case "contrasena":
-                e.target.contrasena!=="" ? campos[contrasena]=true : campos[contrasena]=false       
-        break;
-    }
-}
-
 form.addEventListener("submit", function(e){
     if(input1.value=="" || input2.value==""){
         e.preventDefault()

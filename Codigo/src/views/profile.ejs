@@ -19,45 +19,49 @@
         <div class="informacion1">
             <h2 class="saludo">Hola <%= user.nombre %></h2>
             <div class="informacion">
-                <div class="campo-adicional">
+                <div class="datos">
                     <p class="titulo">Datos registrados</p>
                     <form action="/profile/<%= user.id %>?_method=PUT" method="post">
                         <div>
                             <label for="email">Email registrado</label><br>
                             <input type="text" id="email" name="email" value="<%= user.email %>">
                         </div>
+                        <% if(user.numero!=null&&user.numero!=0){ %>
                         <div>
-                            <% if(user.numero!=null&&user.numero!=0){ %>
                                 <label for="numero">Numero registrado</label><br>
                                 <input type="number" id="numero" name="numero" value="<%= user.numero %>">
-                            <% } %>
                         </div>
-                        <div>
-                            <% if(user.direccion!=null&&user.direccion!=""){ %>
+                        <% } %>
+                        <% if(user.direccion!=null&&user.direccion!=""){ %>
+                            <div>
                                 <label for="direccion">Dirección registrada</label><br>
                                 <input type="text" id="direccion" name="direccion" value="<%= user.direccion %>">
-                            <% } %>
-                        </div>
-                        <button type="submit">Actualizar información</button>
+                            </div>
+                        <% } %>
+                        <section class="boton">
+                            <button type="submit">Actualizar información</button>
+                        </section>
                     </form>
                 </div>
                 <% if(user.direccion==null||user.direccion==""||user.numero==null||user.numero==""){ %>
-                <div class="campo-adicional">
+                <div class="datos">
                     <p class="titulo">Datos adicionales</p>
                     <form action="/profile/<%= user.id %>?_method=PUT"method="post">
-                        <div>
-                            <% if(user.direccion==null||user.direccion==""){ %>
+                        <% if(user.direccion==null||user.direccion==""){ %>
+                            <div>
                                 <label for="direccion">Agregar dirección</label><br>
                                 <input id="direccion" name="direccion" type="text" placeholder="Ingrese la direccion aqui">
+                            </div>
                             <% } %>
-                        </div>
-                        <div>
-                            <% if(user.numero==null||user.numero==""){ %>
+                        <% if(user.numero==null||user.numero==""){ %>
+                            <div>
                                 <label for="numero">Agregar numero</label><br>
-                                <input id="numero"name="numero"type="number">
-                            <% } %>
-                        </div>
-                        <button type="submit">Agregar información</button>
+                                <input id="numero"name="numero" type="tel">
+                            </div>
+                        <% } %>
+                        <section class="boton">
+                            <button type="submit">Agregar información</button>
+                        </section>
                     </form>
                 </div>
                 <% } %>
