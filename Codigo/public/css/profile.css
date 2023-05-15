@@ -5,6 +5,10 @@
     
 
 }
+:not(.main-header,.logo, p, a, header input,header div,header li){
+    box-sizing: border-box; 
+    
+}
 .informacion1{
     padding: 0px 50px;
     display: flex;
@@ -18,11 +22,12 @@
 .datos{
     display: flex;
     flex-wrap: wrap;
-    border: solid 2px black;
+    border: solid 1px black;
     border-radius: 20px;
     padding: 20px;
     position: relative;
     margin: 20px;
+    background-color: #4e4e4e5d;
 }
 
 .boton{
@@ -31,25 +36,59 @@
     top: 93%;
     
     
+    
 }
 .boton button{
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 30px;
-    width: 180px;
-    
-    
+    width: 100%;
+    background-color: rgb(90, 90, 122) ;
+    color: white;
+
 }
-.datos div{
-    padding: 20px;
+.datos form div{
+    padding: 10px;
 }
+.datos form{
+    width: 100%;
+}
+.datos form input{
+    border: none;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px;
+    margin : 10px 0px;
+    width: 100%;
+}
+
 .saludo{
     margin: 20px;
     width: 100%;
     
 }
-.botones{
-    height: 100px;
+div.botones{
+    margin-top: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+.botones form{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.botones form button{
+    border: solid 1px black;
+    margin: 20px;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #4e4e4e5d;
 }
 .informacion{
     display: flex;
@@ -57,4 +96,15 @@
     flex-direction: column;
     
     width: 100%;
+}
+@media(max-width:480px){
+    div.informacion1{
+        padding:0;
+    }
+    div.datos{
+        width: 100%;
+    }
+    .botones form{
+        width: 200px;
+    }
 }

@@ -8,6 +8,8 @@ const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware');
 const PORT=3000;
 /*          EXPRESS               */
 const app = express();
+const cors=require('cors');
+app.use(cors());
 
 
 /*          MIDDLEWARES           */
@@ -32,9 +34,16 @@ app.set('views', path.join(__dirname,'/views'))// Define la ubicación de la car
 const products=require('./routes/products')
 const users=require('./routes/users')
 const indexRoutes=require('./routes/indexRoutes');
+const userApi = require('./routes/api/userApi')
+const productApi = require('./routes/api/productApi')
 
-app.listen(PORT,()=>console.log('Servidor corriendo en puerto '+ PORT))
 
 app.use('/', indexRoutes)
 app.use('/',users)
 app.use('/', products)
+
+app.use('/api/users', userApi)
+app.use('/api/products/', productApi)
+
+
+app.listen(PORT,()=>console.log('Servidor corriendo en puerto '+ PORT))

@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "express-session": "^1.17.3"
+  },
+  "scripts": {
+
+    "test": "nodemon Codigo/src/app.js",
+
+    "start": "node Codigo/src/app.js"
+
   }
 }
