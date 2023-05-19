@@ -1,21 +1,23 @@
 .sliderfull {
     display: flex;
     width: 100%;
+    margin: auto;
     justify-content: center;
     align-self: center;
-    min-width: 420px;
+    min-width: 300px;
     box-shadow: 0 0 25px 25px ;
     
   }
   .sliderimg {
     display: flex;
     width: 100%;
-    min-width: 420px;
+    min-width: 300px;
     flex-wrap: wrap;
     justify-content: center;
   }
   @media (min-width: 768px) {
   .sliderfull {
     min-width: 835px;
+    width: 80%;
     box-shadow: 0 0 25px 10px;
   }}

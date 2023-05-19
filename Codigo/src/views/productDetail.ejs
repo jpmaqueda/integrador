@@ -4,16 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Portal</title>
-    <script src="https://kit.fontawesome.com/51bfd03ccb.js" crossorigin="anonymous"></script>
-    <%- include('partial/head')  %> 
     <link rel="stylesheet" href="/CSS/ProductDetailStyles.css">
-     <link rel="stylesheet" href="./css\header.css" />
-     <link rel="stylesheet" href="css/footer.css"> 
-    
+    <%- include('partial/head') %> 
 </head>
 <body>
-    
   <%- include('partial/header') %>
 <main>
     <% if(typeof product != "undefined"){%>
@@ -102,39 +96,7 @@
     <% }%>
 </main>
 <%- include('partial/footer') %>
-    <!-- <section>
-      <nav>
-          <div class="footer-desktop">                
-              <div class="Icon-footer"><i class="fas fa-truck-moving"></i>             
-                
-                      <ul type="none">
-                          <li><h3>Envíos a todo el pais</h3></li>                       
-                      </ul>
-              </div> 
-              <div class="Icon-footer1"><i class="fas fa-credit-card"></i>
-          
-                      <ul type="none"> 
-                          <li><h3 class="h3-footer">
-                              <p> -Debito </p>
-                              
-                              <p> -Credito </p>
-                              
-                              <p> - Efectivo </p>
-                              
-                                                             
-                          </h3></li>
-                      </ul>
-              </div>   
-              <div class="Icon-footer"><i class="fas fa-user-shield"></i>       
-              
-                      <ul type="none">
-                          <li><h3> Compra con Seguridad </h3> </li>                   
-                      </ul>      
-              </div>
-          </div>
-      </nav>   
-      
-  </section> -->
-
 </body>
+
 </html>
+<script type="text/javascript" src="js/header.js"></script>

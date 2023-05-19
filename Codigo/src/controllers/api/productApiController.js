@@ -15,6 +15,7 @@ module.exports ={
                 id:producto.id,
                 name:producto.nombre,
                 descripcion:producto.descripcion,
+                imagen:"http://localhost:3000/imagenes/productos/"+producto.imagen,
                 relaciones:[{
                     categoria:producto.category.nombre,
                     material:producto.material.nombre

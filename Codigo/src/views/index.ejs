@@ -25,7 +25,6 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
   </head>
   <body>
     
@@ -38,7 +37,6 @@
       <nav class="filtrosyorg">
         <button class="menufiltro">Organiza</button>
         <button class="menufiltro">Filtros</button>
-       
       </nav>
       <div class="categorias">
         <ul class="catbox">
@@ -67,144 +65,25 @@
         </ul>
       </div>
       <div class="columnas">
-       
-          <nav class="cajadecaja">
-            <nav class="menufiltro2"> </nav>
-            <div class="columna1">
-              <% productslectura.forEach(prod=>{%>
-                <a href="/productDetail/<%= prod.id %> ">
-                <div class="preciodesc">
-                <div class="imagenboxcontainer">
-                  <div class="opacity">
-                  </div>
-                  <p class="promo">PROMOCION</p>
-                  <img class="imagencaja" src="imagenes\productos/<%= prod.imagen %>">
-                </div>
+        <nav class="cajadecaja">
+          <!-- <nav class="menufiltro2"> </nav> -->
+          <div class="columna1">
+            <% productslectura.forEach(prod=>{%>
+              <a class="" href="/productDetail/<%= prod.id %> ">
+              <div class="preciodesc">
+              <div class="imagenboxcontainer">
+                <img class="imagencaja" src="imagenes\productos/<%= prod.imagen %>">
+              </div>
+              <div class="precio-descripcion">
                 <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
-                <p class="precio"><%= prod.precio%>$</p>
+                <p class="precio"><%= prod.precio%> $</p>
               </div>
-              </a>
-              <% })%>
-              <div class="preciodesc">
-                <div class="imagenboxcontainer">
-                  <div class="opacity">
-                  </div>
-                  <p class="promo">PROMOCION</p>
-                  <img class="imagencaja" src="imagenes\livingroom-data.jpg">
-                </div>
-                <p class="descripcion">DESCRIPCION</p>
-                <p class="precio">£1.500</p>
-              </div>
-              <div class="preciodesc">
-    <div class="imagenboxcontainer">
-      <div class="opacity">
-    </div>
-    <p class="promo">PROMOCION</p>
-        <img class="imagencaja" src="imagenes\chairs-data.jpg">
-  </div>
-  <p class="descripcion">DESCRIPCION</p>
-  <p class="precio">£1.500</p>
-</div>
-    </div>
-    <div class="columna2">
-      <div class="preciodesc">
-        <div class="imagenboxcontainer">
-          <div class="opacity">
-        </div>
-        <p class="promo">PROMOCION</p>
-            <img class="imagencaja" src="imagenes\sillon3.jpg">
-      </div>
-      <p class="descripcion">DESCRIPCION</p>
-      <p class="precio">£1.500</p>
-    </div>
-    <div class="preciodesc">
-      <div class="imagenboxcontainer">
-        <div class="opacity">
-      </div>
-      <p class="promo">PROMOCION</p>
-          <img class="imagencaja" src="imagenes\desk1.jpg">
-    </div>
-    <p class="descripcion">DESCRIPCION</p>
-    <p class="precio">£1.500</p>
-  </div>
-  <div class="preciodesc">
-    <div class="imagenboxcontainer">
-      <div class="opacity">
-    </div>
-    <p class="promo">PROMOCION</p>
-        <img class="imagencaja" src="imagenes\ratona.jpg">
-  </div>
-  <p class="descripcion">DESCRIPCION</p>
-  <p class="precio">£1.500</p>
-</div>
-  </div>
-  <div class="columna3">
-    <div class="preciodesc">
-      <div class="imagenboxcontainer">
-        <div class="opacity">
-      </div>
-      <p class="promo">PROMOCION</p>
-          <img class="imagencaja" src="imagenes\silla2.jpg">
-    </div>
-    <p class="descripcion">DESCRIPCION</p>
-    <p class="precio">£1.500</p>
-  </div>
-  <div class="preciodesc">
-    <div class="imagenboxcontainer">
-      <div class="opacity">
-    </div>
-    <p class="promo">PROMOCION</p>
-        <img class="imagencaja" src="imagenes\cama2.jpg">
-  </div>
-  <p class="descripcion">DESCRIPCION</p>
-  <p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-  <div class="imagenboxcontainer">
-    <div class="opacity">
-  </div>
-  <p class="promo">PROMOCION</p>
-      <img class="imagencaja" src="imagenes\ratona2.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>
-</div>
-<div class="columna4">
-  <div class="preciodesc">
-    <div class="imagenboxcontainer">
-      <div class="opacity">
-    </div>
-    <p class="promo">PROMOCION</p>
-        <img class="imagencaja" src="imagenes\silla2.jpg">
-  </div>
-  <p class="descripcion">DESCRIPCION</p>
-  <p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-  <div class="imagenboxcontainer">
-    <div class="opacity">
-  </div>
-  <p class="promo">PROMOCION</p>
-      <img class="imagencaja" src="imagenes\sillon.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>
-<div class="preciodesc">
-<div class="imagenboxcontainer">
-  <div class="opacity">
-</div>
-<p class="promo">PROMOCION</p>
-    <img class="imagencaja" src="imagenes\cama1.jpg">
-</div>
-<p class="descripcion">DESCRIPCION</p>
-<p class="precio">£1.500</p>
-</div>
-</div>
-    </nav>
-  </div> 
-  </div>
+            </div>
+            </a>
+            <% })%>
+          </div>
+        </nav>
+      </div> 
     </main>
   </body>
   <%- include('partial/footer') %>

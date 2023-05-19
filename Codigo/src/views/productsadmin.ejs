@@ -26,13 +26,16 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
   </head>
   <body>
     <header>
     <%- include('partial/header') %>
 </header>
 <main>
+  <div class="prod-admin">
+    <h1>Productos</h1>
+    <a href="/productcreation"><button><p>Agregar nuevo producto</p></button></a>
+  </div>
 <div class="cajageneral">
     <% productslectura.forEach(prod => { %>
       <a href="/productedit/<%= prod.id %> "> 
@@ -84,18 +87,9 @@
       </div>
       </a>
     <%})%>
-          
-
 </div>
 
-
-
-
-
 </main>
-  </body>
-  <script>
-    document.getElementById("myButton").addEventListener("click", function(){
-      alert("Button was clicked!");
-    });
-  </script>
+<%- include('partial/footer') %>
+</body>
+</html>

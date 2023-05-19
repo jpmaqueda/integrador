@@ -1,7 +1,6 @@
 .filtrosyorg {
   display: flex;
   width: 100%;
-  min-width: 420px;
   height: 35px;
   background-color: rgb(255, 255, 255);
   justify-content: center;

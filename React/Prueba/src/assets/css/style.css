@@ -1,0 +1,56 @@
+.row{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px
+}
+.last-article{
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    
+}
+.last-article h2{
+    color: black;
+    margin: 30px 0 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+ul.last-products{
+    list-style: none;
+    padding: 15px;
+    display: grid;
+    margin: 0;
+    
+    background-color: #fff;
+}
+ul.last-products img{
+    width: 100%;
+}
+ul.last-products li{
+    color: black;
+    
+    
+}
+ul.last-products li h3,ul.last-products li p strong{
+    color: black;
+
+}
+.descripcion{
+    opacity: 0.5;
+}
+.img-prod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 290px;
+}
+.articulo img{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}

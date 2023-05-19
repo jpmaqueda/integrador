@@ -1,0 +1,41 @@
+div.pagina{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+main.main-buscador{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+main.main-buscador h2{
+    text-align: center;
+}
+.form-productos{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.filtro{
+    display: none;
+}
+.products{
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px
+}
+.products li{
+    text-align: center;
+}

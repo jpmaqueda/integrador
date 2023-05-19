@@ -1,7 +1,31 @@
-.cajageneral{height: 400px;
+.prod-admin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.prod-admin a{
+    text-decoration: none;
+}
+.prod-admin button{
+    background-color: rgba(10, 209, 53, 0.534);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    
+    color:black;
+    
+    cursor: pointer;
+    transition: 500ms;
+}
+.prod-admin button:hover{
+    transform: scale(1.05);
+}
+
+.cajageneral{
     
     margin-top: 40px;
-    min-width:420px;
+    
  
 
 }
@@ -12,7 +36,7 @@
     margin-top: 5px;
     border: solid gray 2px;
     border-radius: 10px;
-    min-width: 380px;
+    
     margin: 5px;
     align-items: center;
     box-sizing: border-box;
@@ -20,7 +44,7 @@
 }
 .cajaimg{
     height: 75px;
-    min-width: 100px;
+    min-width: 80px;
     margin: 5px;
     margin-left: 25px;
     background-color: white;

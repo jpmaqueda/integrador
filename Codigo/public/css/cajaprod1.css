@@ -1,28 +1,55 @@
     .cajadecaja {
         display: flex;
-      justify-content: space-around;
-        min-width:420px;
+        justify-content: space-around;
+        
+        width: 75%;
+        margin: auto;
+      }
+      .columna1{
+        display: grid;
         width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap:30px;
+        margin: 30px 0;
+        
       }
       .imagenboxcontainer {
-        width: 170px;
-        min-width: 65px;
+        width: 100%;
         height: 250px;
         position: relative;
-        display: flex;        
+        display: flex;
+        margin: auto;
+        
+      }
+      .imagencaja {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        
+        
+      }
+      .precio-descripcion{
+        padding: 10px;
       }
       .precio{
         display:  flex ;
         font-weight: 800;
       }
+      .columna1 a{
+        border: solid black 1px;
+        border-radius: 10px;
+        padding: 10px;
+      }
       .preciodesc{
+        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        height: 320px;
-        width: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        justify-content: center;
+        width: 70%;
+        
+        
+        
       }
       .promo {
         display: flex;
@@ -38,17 +65,8 @@
       }
       .descripcion{
         font-weight: bold;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        margin: 0 ;
         
-      }
-      .imagencaja {
-        display: flex;
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
+        
       }
       .opacity{
         display: flex;
@@ -72,9 +90,21 @@
       }
       @media (min-width: 768px) {
 
-        .columna3{display: inline ;}
+        
+        .preciodesc{
+          width: 100%;
+        }
+        
       }
       @media (min-width: 1000px) {
+        .columna1{
+          display: grid;
+          width: 100%;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap:35px;
+          margin: 30px 0;
+          
+        }
         .columna4{display: inline;}
       }
 

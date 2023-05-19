@@ -1,0 +1,105 @@
+{
+    "meta": {
+      "count": 7,
+      "countByCategory": [
+        {
+          "categoria": "hogar",
+          "product": 1
+        },
+        {
+          "categoria": "exterior",
+          "product": 5
+        },
+        {
+          "categoria": "cocina",
+          "product": 1
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "mesa",
+        "descripcion": "muy buena mesa",
+        "relaciones": [
+          {
+            "categoria": "exterior",
+            "material": "Nogal"
+          }
+        ],
+        "url": "/api/products/1"
+      },
+      {
+        "id": 2,
+        "name": "silla",
+        "descripcion": "Una silla con forma de cama ",
+        "relaciones": [
+          {
+            "categoria": "exterior",
+            "material": "Haya"
+          }
+        ],
+        "url": "/api/products/2"
+      },
+      {
+        "id": 10,
+        "name": "mesa 2",
+        "descripcion": null,
+        "relaciones": [
+          {
+            "categoria": "cocina",
+            "material": "Nogal"
+          }
+        ],
+        "url": "/api/products/10"
+      },
+      {
+        "id": 12,
+        "name": "Gianfranco Sacchi",
+        "descripcion": null,
+        "relaciones": [
+          {
+            "categoria": "hogar",
+            "material": "Haya"
+          }
+        ],
+        "url": "/api/products/12"
+      },
+      {
+        "id": 14,
+        "name": "Anabella",
+        "descripcion": "Una silla con forma de cama ",
+        "relaciones": [
+          {
+            "categoria": "exterior",
+            "material": "Haya"
+          }
+        ],
+        "url": "/api/products/14"
+      },
+      {
+        "id": 16,
+        "name": "muebles",
+        "descripcion": "alggoooooooooooooooooooooooooooosssoo",
+        "relaciones": [
+          {
+            "categoria": "exterior",
+            "material": "Nogal"
+          }
+        ],
+        "url": "/api/products/16"
+      },
+      {
+        "id": 17,
+        "name": "silla madera",
+        "descripcion": "llllllllllllllllllllllllllllllllllllllllllllllll",
+        "relaciones": [
+          {
+            "categoria": "exterior",
+            "material": "Haya"
+          }
+        ],
+        "url": "/api/products/17"
+      }
+    ]
+  }

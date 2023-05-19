@@ -2,8 +2,6 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    
-
 }
 :not(.main-header,.logo, p, a, header input,header div,header li){
     box-sizing: border-box; 
