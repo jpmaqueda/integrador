@@ -2,7 +2,7 @@
 const express = require('express');
 const path=require('path');
 const session =require('express-session');
-const cookies =require('cookie-parser');
+const cookies = require('cookie-parser');
 const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
 const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware');
 const PORT=3000;
@@ -17,12 +17,12 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.use(methodOverride('_method'));// Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
+app.use(cookies());
 app.use(session({
     secret:'secreto!!!!',
     resave:false,
     saveUninitialized:false,
 }))
-app.use(cookies());
 app.use(userLoggedMiddleware);
 
 /*         TEMPLATE ENGINE        */
