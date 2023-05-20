@@ -21,7 +21,7 @@ app.use(cookies());
 app.use(session({
     secret:'secreto!!!!',
     resave:false,
-    saveUninitialized:true
+    saveUninitialized:false
 }))
 app.use(userLoggedMiddleware);
 
