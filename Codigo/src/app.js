@@ -5,7 +5,7 @@ const session =require('express-session');
 const cookies = require('cookie-parser');
 const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
 const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware');
-const PORT=3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 /*          EXPRESS               */
 const app = express();
 const cors=require('cors');
@@ -46,4 +46,4 @@ app.use('/api/users', userApi)
 app.use('/api/products/', productApi)
 
 
-app.listen(PORT,()=>console.log('Servidor corriendo en puerto '+ PORT))
+app.listen(port,()=>console.log('Servidor corriendo en puerto '+ port))
