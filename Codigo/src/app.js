@@ -5,7 +5,7 @@ const session =require('express-session');
 const cookies = require('cookie-parser');
 const methodOverride =  require('method-override');// Pasar poder usar los métodos PUT y DELETE
 const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware');
-const PORT=3000;
+const PORT=3000 || process.env.PORT;
 /*          EXPRESS               */
 const app = express();
 const cors=require('cors');
