@@ -35,7 +35,7 @@
         <img class="sliderimg" src="imagenes\bannerej.jpg" />
       </div>
       <nav class="filtrosyorg">
-        <button class="menufiltro">Organiza</button>
+        <button class="menufiltro">Ordenar por</button>
         <button class="menufiltro">Filtros</button>
       </nav>
       <div class="categorias">
@@ -69,14 +69,15 @@
           <!-- <nav class="menufiltro2"> </nav> -->
           <div class="columna1">
             <% productslectura.forEach(prod=>{%>
-              <a class="" href="/productDetail/<%= prod.id %> ">
+              <a class="a-product" href="/productDetail/<%= prod.id %> ">
               <div class="preciodesc">
               <div class="imagenboxcontainer">
                 <img class="imagencaja" src="imagenes\productos/<%= prod.imagen %>">
               </div>
               <div class="precio-descripcion">
-                <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
                 <p class="precio"><%= prod.precio%> $</p>
+                <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
+                <p style="display:none"><%= prod.category.nombre %></p>
               </div>
             </div>
             </a>

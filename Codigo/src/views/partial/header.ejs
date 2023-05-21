@@ -6,9 +6,9 @@
         </div>
       </a>
       
-      <nav class="search">
-        <input type="text" placeholder="Buscar productos, marcas y mas..." />
-      </nav>
+      <form class="search" onSubmit="handleSubmit()">
+        <input type="text" onKeyUp="handleChange()" class="input_bucar" name="input_bucar" placeholder="Buscar productos, marcas y mas..." />
+      </form>
       <% if (locals.isLogged) { %>
        
       
@@ -34,7 +34,9 @@
         </a>
       </div>
       <div class="infder">
-        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        <a class="i-shoppingCart" href="/shoppingCart">
+          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </a>
       </div>
     </div>
   </header>
@@ -52,7 +54,7 @@
             
         </nav>
       </div>
-      <script type="text/javascript" >
+      <script type="text/javascript"  >
         const body = document.querySelector('body')
         const background = document.querySelector('.menu')
         const toggleMenu = () => body.classList.toggle("open");
@@ -76,4 +78,14 @@
       
         element.scrollIntoView(options);
         });
+        function handleChange(){
+          const slider = document.querySelector('.sliderfull')
+          const buscar=document.querySelector('.input_bucar').value
+          document.querySelectorAll("a.a-product").forEach(product=>{
+              product.textContent.toLowerCase().includes(buscar)
+              ? product.classList.remove("filtro")
+              : product.classList.add("filtro")
+          })
+          slider.classList.add('filtro')
+      }
       </script>

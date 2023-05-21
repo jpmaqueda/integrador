@@ -21,3 +21,14 @@ document.getElementById("scroll-to-end").addEventListener("click", function(even
   
     element.scrollIntoView(options);
   });
+const handleSubmit =(e)=>{
+    e.preventDefault()
+}
+const handleChange = (e)=>{
+    const buscar= e.target.value.toLowerCase()
+    document.querySelectorAll(".a-product").forEach(product=>{
+        product.textContent.toLowerCase().includes(buscar)
+        ? product.classList.remove("filtro")
+        : product.classList.add("filtro")
+    })
+}

@@ -4,5 +4,8 @@ body {
   width: auto;
   background-color: #ebebeb;
 }
+div.columnas{
+  margin-top: 20px;
+}
 
 
