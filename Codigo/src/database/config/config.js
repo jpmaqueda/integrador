@@ -1,9 +1,9 @@
 module.exports={
   "development": {
-    "username": "314178_",
-    "password": "proyectoDH",
-    "database": "gianfranco_proyecto",
-    "host": "mysql-gianfranco.alwaysdata.net",
+     "username": "root",
+    "password": null,
+    "database": "pruebaproyecto",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
