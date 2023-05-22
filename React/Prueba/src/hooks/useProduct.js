@@ -8,7 +8,7 @@ export function useProduct() {
     const totalProduct = totalProd
     const totalCategoria = totalcateg
     
-    const API_PRODUCT='http://localhost:3000/api/products'
+    const API_PRODUCT='https://el-portal.onrender.com/api/products'
     useEffect(()=>{
         fetch(API_PRODUCT)
         .then(res=> res.json())

@@ -3,7 +3,7 @@ function ListOfProducts({products}){
         <ul className="products">
            { 
             products.map(producto =>(
-                <article className="article" key={producto.id}>
+                <a href={`https://el-portal.onrender.com/productedit/${producto.id}`} className="article" key={producto.id}>
                     <li  className="articulo">
                         <div className="img-prod">
                             <img  src={producto.imagen} alt="" />
@@ -15,7 +15,7 @@ function ListOfProducts({products}){
                             <p><strong>Material:</strong> {producto.material}</p>
                         </div>
                     </li>
-                </article>
+                </a>
             ))
             }
         </ul>
@@ -23,7 +23,7 @@ function ListOfProducts({products}){
 }
 function  NoProductResult(){
     return(
-        <p>No se encontraron los productos</p>
+        <p className="no-producto">No se encontraron los productos</p>
     )
 }
 export function Product({products}){

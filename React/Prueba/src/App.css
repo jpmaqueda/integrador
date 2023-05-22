@@ -1,3 +1,6 @@
+html{
+    padding: 30px;
+}
 div.pagina{
     display: flex;
     flex-wrap: wrap;
@@ -5,10 +8,11 @@ div.pagina{
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
     margin: auto;
 }
 main.main-buscador{
+    max-width: 800px;
+    margin-left: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;

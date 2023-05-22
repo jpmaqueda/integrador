@@ -7,9 +7,9 @@ export function useUser(){
     const usuarios = responseUser
     const total = totalUser
 
-    const API_USER="http://localhost:3000/api/users"
-    useEffect(()=>{
-        const fetchData= async ()=>{
+    const API_USER="https://el-portal.onrender.com/api/users"
+    useEffect(() => {
+        const fetchData= async () => {
             const data = await fetch(API_USER)
             const json =await data.json()
             setResponesUser(json.user)

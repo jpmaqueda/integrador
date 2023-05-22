@@ -7,10 +7,15 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap:25px
 }
+.article{
+    cursor: pointer;
+}
 .last-article{
     background-color: #fff;
     width: 100%;
     max-width: 600px;
+    border-radius: 15px;
+    margin: auto;
     
 }
 .last-article h2{
@@ -20,12 +25,19 @@
     font-size: 30px;
     font-weight: 600;
 }
+.lastProduct{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 1000px;
+}
 ul.last-products{
     list-style: none;
     padding: 15px;
     display: grid;
     margin: 0;
-    
+    border-radius: 15px;
     background-color: #fff;
 }
 ul.last-products img{
@@ -53,4 +65,76 @@ ul.last-products li h3,ul.last-products li p strong{
     margin: auto;
     max-width: 100%;
     max-height: 100%;
+}
+.conteiner{
+    border:solid 2px black;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cifra{
+    margin: 10px 0 0 0px;
+}
+.allProducts{
+    width:100%;
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+.no-producto{
+    text-align: center;
+}
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+    position: absolute;
+    top: 300px;
+    left:200px;
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+@media (max-width:1000px){
+    div.lastProduct{
+        width: 100%;
+
+    }
+    .allProducts{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
