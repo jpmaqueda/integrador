@@ -1,4 +1,4 @@
-let form = document.querySelector('form')
+let form = document.querySelector('form.form-login')
 let inputName = document.querySelector('#nombre')
 let inputEmail = document.querySelector('#email')
 let inputContrasena = document.querySelector('#contrasena')
@@ -73,7 +73,16 @@ inputs.forEach((input)=>{
 
 form.addEventListener('submit',function(e){
     if(!(campos.nombre && campos.email && campos.contrasena && campos.contrasena2)){
-        e.preventDefault() 
+        e.preventDefault()
+        if(!campos.nombre){
+            document.querySelector(`#control-nombre`).classList.add('error')
+        }
+        if(!campos.email){
+            document.querySelector(`#control-email`).classList.add('error')
+        }
+        if(!campos.contrasena){
+            document.querySelector(`#control-contrasena`).classList.add('error')
+        }
     }
 })
     

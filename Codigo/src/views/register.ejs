@@ -23,7 +23,7 @@
         <div class="conteiner">
             
             <h2>Creá tu cuenta</h2>
-            <form action="/register" method="post" >
+            <form class="form-login" action="/register" method="post" >
                 <div class="separacion">
                     <div class="form-control <%= locals.errors && errors.nombre ? 'error' : null %>" id="control-nombre">
                         <label for="nombre">Ingrese nombre y apellido</label>
@@ -123,5 +123,5 @@
     </main>
     <%- include('partial/footer') %>
 </body>
-<script src="js/validatorRegister.js"></script>
+<script type="text/javascript" src="js/validatorRegister.js"></script>
 </html>
