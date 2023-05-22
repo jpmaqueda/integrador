@@ -69,18 +69,20 @@
           <!-- <nav class="menufiltro2"> </nav> -->
           <div class="columna1">
             <% productslectura.forEach(prod=>{%>
+              <% if(prod.stock > 0){ %>  
               <a class="a-product" href="/productDetail/<%= prod.id %> ">
-              <div class="preciodesc">
-              <div class="imagenboxcontainer">
-                <img class="imagencaja" src="imagenes\productos/<%= prod.imagen %>">
-              </div>
-              <div class="precio-descripcion">
-                <p class="precio"><%= prod.precio%> $</p>
-                <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
-                <p style="display:none"><%= prod.category.nombre %></p>
-              </div>
-            </div>
-            </a>
+                <div class="preciodesc">
+                  <div class="imagenboxcontainer">
+                    <img class="imagencaja" src="imagenes\productos/<%= prod.imagen %>">
+                  </div>
+                  <div class="precio-descripcion">
+                    <p class="precio"><%= prod.precio%> $</p>
+                    <p class="descripcion" style="text-transform: uppercase"><%= prod.nombre %></p>
+                    <p style="display:none"><%= prod.category.nombre %></p>
+                  </div>
+                </div>
+              </a>
+            <% } %>
             <% })%>
           </div>
         </nav>

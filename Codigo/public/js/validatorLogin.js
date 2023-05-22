@@ -15,9 +15,9 @@ form.addEventListener("submit", function(e){
 
 
 
-const handleChange = (event) => {
+const handleChange2 = (event) => {
     input1.classList.toggle("has-value", event.target.value);
 };
-const handleChange2 = (event) => {
+const handleChange3 = (event) => {
     input2.classList.toggle("has-value", event.target.value);
 };

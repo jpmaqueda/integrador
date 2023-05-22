@@ -7,7 +7,7 @@
       </a>
       
       <form class="search" onSubmit="handleSubmit()">
-        <input type="text" onKeyUp="handleChange()" class="input_bucar" name="input_bucar" placeholder="Buscar productos, marcas y mas..." />
+        <input type="text" onKeyUp=<%= 'handleChange()' ? 'handleChange()' : null %> class="input_bucar" name="input_bucar" placeholder="Buscar productos, marcas y mas..." />
       </form>
       <% if (locals.isLogged) { %>
        
@@ -78,14 +78,17 @@
       
         element.scrollIntoView(options);
         });
+        if(window.location.pathname === '/'){
         function handleChange(){
           const slider = document.querySelector('.sliderfull')
-          const buscar=document.querySelector('.input_bucar').value
+          const buscar=document.querySelector('.input_bucar').value.toLowerCase()
           document.querySelectorAll("a.a-product").forEach(product=>{
               product.textContent.toLowerCase().includes(buscar)
               ? product.classList.remove("filtro")
               : product.classList.add("filtro")
           })
           slider.classList.add('filtro')
+      }
+        
       }
       </script>

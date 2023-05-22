@@ -8,9 +8,9 @@ const upload=require('../middlewares/multerMiddlewares')
 
 
 router.get('/productDetail/:id',pcControllers.detail)
-router.get("/productcreation",pcControllers.store);
+router.get("/productcreation",adminMiddleware,pcControllers.store);
 router.post("/productcreation", upload.single("imagen") ,validator ,pcControllers.create);
-router.get("/productedit/:id", pcControllers.edit);
+router.get("/productedit/:id",adminMiddleware, pcControllers.edit);
 router.put('/productedit/:id', upload.single("imagen") ,validator,pcControllers.update)
 router.get('/shoppingCart', autMiddleware, pcControllers.cart);
 /* router.get('/shoppingCartAdd', pcControllers.cartAdd); */

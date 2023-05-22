@@ -1,7 +1,7 @@
 const db = require('../../database/models');
 const PRODUCTS=db.Product;
 const CATEGORIES=db.Category
-
+const RUTA_API='https://el-portal.onrender.com'
 module.exports ={
     'list': async(req, res)=>{
         let productos = await PRODUCTS.findAll({
@@ -15,7 +15,7 @@ module.exports ={
                 id:producto.id,
                 name:producto.nombre,
                 descripcion:producto.descripcion,
-                imagen:"http://localhost:3000/imagenes/productos/"+producto.imagen,
+                imagen:RUTA_API + "/imagenes/productos/" + producto.imagen,
                 relaciones:[{
                     categoria:producto.category.nombre,
                     material:producto.material.nombre
